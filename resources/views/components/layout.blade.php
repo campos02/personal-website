@@ -12,7 +12,7 @@
         <meta property="og:description" content="My personal website">
         @vite('resources/css/app.css')
     </head>
-    <body class="scrollbar-thin bg-neutral-100 dark:bg-neutral-800 dark:scrollbar-thumb-neutral-700 dark:text-zinc-200">
+    <body class="scrollbar-thin bg-neutral-100 dark:bg-neutral-800 dark:scrollbar-thumb-neutral-700 scrollbar-thumb-neutral-300 dark:text-zinc-200">
         <div class="grid h-screen drop-shadow-sm">
             <header class="self-start font-light text-xl dark:bg-stone-800 p-4 dark:border-neutral-600 border-b mb-6 flex justify-center">
                 <div class="space-x-8">
