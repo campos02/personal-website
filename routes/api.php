@@ -22,4 +22,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/artists', [ArtistsApiController::class, 'addArtist']);
 
+Route::delete('/artists', [ArtistsApiController::class, 'removeArtist']);
+
+Route::delete('/artists/{id}', [ArtistsApiController::class, 'removeArtistById']);
+
 Route::post('/albums', [AlbumsApiController::class, 'addAlbum']);
+
+Route::delete('/albums', [AlbumsApiController::class, 'removeAlbum']);
+
+Route::delete('/albums/{id}', [AlbumsApiController::class, 'removeAlbumById']);
