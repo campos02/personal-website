@@ -9,43 +9,53 @@ class ArtistsApiController extends Controller
 {
     public function addArtist(Request $request) : string
     {
+        $request->validate([
+            'artist' => 'required',
+            'category' => 'required'
+        ]);
+        
         $artist = $request->input('artist');
         $category = $request->input('category');
-        if (empty($artist) || empty($category)) {
-            abort(400);
-        }
 
         $artistResult = new Artist;
         $artistResult->artist = $artist;
         $artistResult->category = $category;
         $artistResult->save();
-
         $result = Artist::find($artistResult->id);
+
         return $result->toJson();
     }
 
     public function removeArtist(Request $request) : string
     {
+        $request->validate([
+            'artist' => 'required',
+        ]);
+
         $artist = $request->input('artist');
-        if (empty($artist)) {
-            abort(400);
+        $results = Artist::where('artist', $artist);
+        if ($results->get()->isEmpty()) {
+            abort(404);
+        } else {
+            $results->delete();
         }
 
-        Artist::where($artist)->delete();
         return response()->json([
-            'artist' => $artist,
-            'result' => 'All entries removed'
+            'result' => "$artist removed"
         ]);
     }
 
     public function removeArtistById(string $id) : string
     {
-        $artistResult = Artist::find($id);
+        if (!$artistResult = Artist::find($id)) {
+            abort(404);
+        }
+
         $artistName = $artistResult->artist;
         $artistResult->delete();
+
         return response()->json([
-            'artist' => $artistName,
-            'result' => 'Removed'
+            'result' => "$artistName removed"
         ]);
     }
 }

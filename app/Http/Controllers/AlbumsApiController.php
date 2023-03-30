@@ -9,44 +9,53 @@ class AlbumsApiController extends Controller
 {
     public function addAlbum(Request $request) : string
     {
+        $request->validate([
+            'artist' => 'required',
+            'album' => 'required'
+        ]);
+        
         $artist = $request->input('artist');
         $album = $request->input('album');
-        if (empty($artist) || empty($album)) {
-            abort(400);
-        }
 
         $albumResult = new Album;
         $albumResult->artist = $artist;
         $albumResult->album = $album;
         $albumResult->save();
-
         $result = Album::find($albumResult->id);
+
         return $result->toJson();
     }
 
     public function removeAlbum(Request $request) : string
     {
+        $request->validate([
+            'album' => 'required',
+        ]);
+
         $album = $request->input('album');
-        if (empty($album)) {
-            abort(400);
+        $results = Album::where('album', $album);
+        if ($results->get()->isEmpty()) {
+            abort(404);
+        } else {
+            $results->delete();
         }
 
-        Album::where($album)->delete();
         return response()->json([
-            'album' => $album,
-            'result' => 'All entries removed'
+            'result' => "$album removed"
         ]);
     }
 
     public function removeAlbumById(string $id) : string
     {
-        $albumResult = Album::find($id);
+        if (!$albumResult = Album::find($id)) {
+            abort(404);
+        }
+
         $albumName = $albumResult->album;
         $albumResult->delete();
-        
+
         return response()->json([
-            'album' => $albumName,
-            'result' => 'Removed'
+            'result' => "$albumName removed"
         ]);
     }
 }
