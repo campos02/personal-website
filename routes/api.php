@@ -20,11 +20,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/artists', [ArtistsApiController::class, 'getArtists']);
+
 Route::post('/artists', [ArtistsApiController::class, 'addArtist']);
 
 Route::delete('/artists', [ArtistsApiController::class, 'removeArtist']);
 
 Route::delete('/artists/{id}', [ArtistsApiController::class, 'removeArtistById']);
+
+Route::get('/albums', [AlbumsApiController::class, 'getAlbums']);
 
 Route::post('/albums', [AlbumsApiController::class, 'addAlbum']);
 

@@ -4,9 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Album;
+use App\Http\Resources\AlbumCollection;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class AlbumsApiController extends Controller
 {
+    public function getAlbums() : AnonymousResourceCollection
+    {
+        return AlbumCollection::collection(Album::all());
+    }
+
     public function addAlbum(Request $request) : string
     {
         $request->validate([

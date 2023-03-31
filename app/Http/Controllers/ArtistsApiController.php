@@ -4,9 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Artist;
+use App\Http\Resources\ArtistCollection;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class ArtistsApiController extends Controller
 {
+    public function getArtists() : AnonymousResourceCollection
+    {
+        return ArtistCollection::collection(Artist::all());
+    }
+
     public function addArtist(Request $request) : string
     {
         $request->validate([
