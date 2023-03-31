@@ -4,14 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Album;
-use App\Http\Resources\AlbumCollection;
+use App\Http\Resources\AlbumResource;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class AlbumsApiController extends Controller
 {
     public function getAlbums() : AnonymousResourceCollection
     {
-        return AlbumCollection::collection(Album::all());
+        return AlbumResource::collection(Album::all());
+    }
+
+    public function getAlbumById(string $id)
+    {
+        if (!$album = Album::find($id)) {
+            return response()->json([
+                'message' => 'Album not found'
+            ], 404);
+        }
+
+        return new AlbumResource($album);
     }
 
     public function addAlbum(Request $request) : string

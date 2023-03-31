@@ -4,14 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Artist;
-use App\Http\Resources\ArtistCollection;
+use App\Http\Resources\ArtistResource;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class ArtistsApiController extends Controller
 {
     public function getArtists() : AnonymousResourceCollection
     {
-        return ArtistCollection::collection(Artist::all());
+        return ArtistResource::collection(Artist::all());
+    }
+
+    public function getArtistById(string $id)
+    {
+        if (!$artist = Artist::find($id)) {
+            return response()->json([
+                'message' => 'Artist not found'
+            ], 404);
+        }
+
+        return new ArtistResource($artist);
     }
 
     public function addArtist(Request $request) : string
