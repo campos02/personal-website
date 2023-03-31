@@ -42,7 +42,9 @@ class ArtistsApiController extends Controller
         $artist = $request->input('artist');
         $results = Artist::where('artist', $artist);
         if ($results->get()->isEmpty()) {
-            abort(404);
+            return response()->json([
+                'message' => 'Artist not found'
+            ], 404);
         } else {
             $results->delete();
         }
@@ -55,7 +57,9 @@ class ArtistsApiController extends Controller
     public function removeArtistById(string $id) : string
     {
         if (!$artistResult = Artist::find($id)) {
-            abort(404);
+            return response()->json([
+                'message' => 'Artist not found'
+            ], 404);
         }
 
         $artistName = $artistResult->artist;

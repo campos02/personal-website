@@ -42,7 +42,9 @@ class AlbumsApiController extends Controller
         $album = $request->input('album');
         $results = Album::where('album', $album);
         if ($results->get()->isEmpty()) {
-            abort(404);
+            return response()->json([
+                'message' => 'Album not found'
+            ], 404);
         } else {
             $results->delete();
         }
@@ -55,7 +57,9 @@ class AlbumsApiController extends Controller
     public function removeAlbumById(string $id) : string
     {
         if (!$albumResult = Album::find($id)) {
-            abort(404);
+            return response()->json([
+                'message' => 'Album not found'
+            ], 404);
         }
 
         $albumName = $albumResult->album;
