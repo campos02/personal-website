@@ -7,6 +7,7 @@ use App\Models\Artist;
 use App\Models\Album;
 use App\Http\Resources\AlbumResource;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class AlbumsApiController extends Controller
 {
@@ -15,70 +16,59 @@ class AlbumsApiController extends Controller
         return AlbumResource::collection(Album::all());
     }
 
-    public function getAlbumById(string $id)
+    public function getAlbumById(string $id) : AlbumResource
     {
-        if (!$album = Album::find($id)) {
-            return response()->json([
-                'message' => 'Album not found'
-            ], 404);
-        }
+        $album = Album::selectAlbum($id);
 
         return new AlbumResource($album);
     }
 
-    public function addAlbum(Request $request) : string
+    public function getArtistAlbums(string $artistId) : AnonymousResourceCollection
+    {
+        $artist = Artist::selectArtist($artistId);
+
+        return AlbumResource::collection($artist->albums);
+    }
+
+    public function getArtistAlbumById(string $artistId, string $albumId) : AlbumResource
+    {
+        $album = Artist::selectArtist($artistId)->selectAlbum($albumId);
+
+        return new AlbumResource($album);
+    }
+
+    public function addAlbum(Request $request, string $artistId) : string
     {
         $request->validate([
-            'artist' => 'required',
             'album' => 'required'
         ]);
         
-        $artist = $request->input('artist');
         $album = $request->input('album');
+        $artist = Artist::selectArtist($artistId);
 
-        $albumResult = new Album;
-        $albumResult->artist = $artist;
-        $albumResult->album = $album;
-        $albumResult->save();
-        $result = Album::find($albumResult->id);
-
-        return $result->toJson();
+        return $artist->insertAlbum($album)->toJson();
     }
 
-    public function removeAlbum(Request $request) : string
+    public function removeAlbum(Request $request, string $artistId) : string
     {
         $request->validate([
             'album' => 'required',
         ]);
 
         $album = $request->input('album');
-        $results = Album::where('album', $album);
-        if ($results->get()->isEmpty()) {
-            return response()->json([
-                'message' => 'Album not found'
-            ], 404);
-        } else {
-            $results->delete();
-        }
+        Artist::selectArtist($artistId)->deleteAlbum($album);
 
         return response()->json([
             'result' => "$album removed"
         ]);
     }
 
-    public function removeAlbumById(string $id) : string
+    public function removeAlbumById(string $artistId, string $albumId) : string
     {
-        if (!$albumResult = Album::find($id)) {
-            return response()->json([
-                'message' => 'Album not found'
-            ], 404);
-        }
-
-        $albumName = $albumResult->album;
-        $albumResult->delete();
+        $album = Artist::selectArtist($artistId)->deleteAlbumById($albumId);
 
         return response()->json([
-            'result' => "$albumName removed"
+            'result' => "$album removed"
         ]);
     }
 }

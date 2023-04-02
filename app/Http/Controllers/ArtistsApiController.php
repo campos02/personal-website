@@ -16,11 +16,7 @@ class ArtistsApiController extends Controller
 
     public function getArtistById(string $id)
     {
-        if (!$artist = Artist::find($id)) {
-            return response()->json([
-                'message' => 'Artist not found'
-            ], 404);
-        }
+        $artist = Artist::selectArtist($id);
 
         return new ArtistResource($artist);
     }
@@ -35,8 +31,7 @@ class ArtistsApiController extends Controller
         $artist = $request->input('artist');
         $category = $request->input('category');
 
-        $artistAdded = new Artist;
-        $result = $artistAdded->insertArtist($artist, $category);
+        $result = Artist::insertArtist($artist, $category);
 
         return $result->toJson();
     }
@@ -48,14 +43,7 @@ class ArtistsApiController extends Controller
         ]);
 
         $artist = $request->input('artist');
-        $results = Artist::where('artist', $artist);
-        if ($results->get()->isEmpty()) {
-            return response()->json([
-                'message' => 'Artist not found'
-            ], 404);
-        } else {
-            $results->delete();
-        }
+        Artist::deleteArtist($artist);
 
         return response()->json([
             'result' => "$artist removed"
@@ -64,14 +52,7 @@ class ArtistsApiController extends Controller
 
     public function removeArtistById(string $id) : string
     {
-        if (!$artistResult = Artist::find($id)) {
-            return response()->json([
-                'message' => 'Artist not found'
-            ], 404);
-        }
-
-        $artistName = $artistResult->artist;
-        $artistResult->delete();
+        $artistName = Artist::deleteArtistById($id);
 
         return response()->json([
             'result' => "$artistName removed"
