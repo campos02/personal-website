@@ -31,14 +31,14 @@ class Artist extends Model
         return Artist::find($newArtist->id);
     }
 
-    public static function deleteArtist()
+    public static function deleteArtist(string $artist)
     {
-        $artist = Artist::where('album', $album);
+        $artistToDelete = Artist::where('artist', $artist);
 
-        if ($artist->get()->isEmpty()) {
+        if ($artistToDelete->get()->isEmpty()) {
             throw new ModelNotFoundException('Artist not found');
         } else {
-            $artist->delete();
+            $artistToDelete->delete();
         }
     }
 
@@ -77,12 +77,12 @@ class Artist extends Model
 
     public function deleteAlbum(string $album) 
     {
-        $album = Album::where('album', $album);
+        $albumToDelete = Album::where('album', $album);
 
-        if ($album->get()->isEmpty()) {
+        if ($albumToDelete->get()->isEmpty()) {
             throw new ModelNotFoundException('Album not found');
         } else {
-            $album->delete();
+            $albumToDelete->delete();
         }
     }
 
