@@ -13,13 +13,10 @@ class ArtistsController extends Controller
     {
         $listeningArtists = Artist::where('category', 'Listening')->get();
         $otherArtists = Artist::where('category', 'Other')->get();
-        $albumsQuery = Album::all();
-        $albums = $albumsQuery->groupBy('artist');
 
         return view('favoriteartists', [
             'listeningArtists' => $listeningArtists,
             'otherArtists' => $otherArtists,
-            'artistsAlbums' => $albums,
         ]);
     }
 }

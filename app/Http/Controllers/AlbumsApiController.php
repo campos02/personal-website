@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Artist;
 use App\Models\Album;
 use App\Http\Resources\AlbumResource;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;

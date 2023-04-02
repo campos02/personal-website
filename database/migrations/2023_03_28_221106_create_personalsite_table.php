@@ -15,13 +15,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('albums', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->id();
             $table->string('artist')->nullable();
             $table->string('album')->nullable();
         });
 
         Schema::create('artists', function (Blueprint $table) {
-            $table->integer('id', true);
+            $table->id();
             $table->string('artist')->nullable();
             $table->string('category', 20)->nullable();
         });

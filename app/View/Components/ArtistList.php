@@ -11,7 +11,7 @@ class ArtistList extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct(public $artists, public $albumList)
+    public function __construct(public $artists)
     {
     }
 

@@ -35,11 +35,8 @@ class ArtistsApiController extends Controller
         $artist = $request->input('artist');
         $category = $request->input('category');
 
-        $artistResult = new Artist;
-        $artistResult->artist = $artist;
-        $artistResult->category = $category;
-        $artistResult->save();
-        $result = Artist::find($artistResult->id);
+        $artistAdded = new Artist;
+        $result = $artistAdded->insertArtist($artist, $category);
 
         return $result->toJson();
     }
