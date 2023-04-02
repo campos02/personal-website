@@ -11,8 +11,8 @@ class ArtistsController extends Controller
 {
     public function show() : View
     {
-        $listeningArtists = Artist::where('category', 'Listening')->get();
-        $otherArtists = Artist::where('category', 'Other')->get();
+        $listeningArtists = Artist::selectListeningArtists();
+        $otherArtists = Artist::selectOtherArtists();
 
         return view('favoriteartists', [
             'listeningArtists' => $listeningArtists,

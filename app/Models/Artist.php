@@ -6,11 +6,22 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Database\Eloquent\Collection;
 use App\Models\Album;
 
 class Artist extends Model
 {
     use HasFactory;
+
+    public static function selectListeningArtists() : Collection
+    {
+        return Artist::where('category', 'Listening')->get();
+    }
+
+    public static function selectOtherArtists() : Collection
+    {
+        return Artist::where('category', 'Other')->get();
+    }
 
     public static function selectArtist(string $id) : Artist
     {
