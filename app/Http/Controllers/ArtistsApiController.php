@@ -36,13 +36,19 @@ class ArtistsApiController extends Controller
     {
         $request->validate([
             'artist' => 'required',
-            'category' => 'required'
+            'category' => 'required',
+            'albums' => 'array'
         ]);
         
         $artist = $request->input('artist');
         $category = $request->input('category');
-
         $result = Artist::insertArtist($artist, $category);
+
+        if ($albums = $request->input('albums')) {
+            foreach ($albums as $album) {
+                $result->insertAlbum($album);
+            }
+        }
 
         return $result->toJson();
     }
