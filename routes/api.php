@@ -31,6 +31,8 @@ Route::get('/artists/{artistId}/albums', [AlbumsApiController::class, 'getArtist
 
 Route::get('/artists/{artistId}/albums/{albumId}', [AlbumsApiController::class, 'getArtistAlbumById']);
 
+Route::post('/artists/id', [ArtistsApiController::class, 'getArtistId']);
+
 Route::middleware('auth:sanctum')->post('/artists', [ArtistsApiController::class, 'addArtist']);
 
 Route::middleware('auth:sanctum')->delete('/artists', [ArtistsApiController::class, 'removeArtist']);

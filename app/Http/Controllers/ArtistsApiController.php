@@ -14,11 +14,22 @@ class ArtistsApiController extends Controller
         return ArtistResource::collection(Artist::all());
     }
 
-    public function getArtistById(string $id)
+    public function getArtistById(string $id) : ArtistResource
     {
-        $artist = Artist::selectArtist($id);
+        $artist = Artist::selectArtistById($id);
 
         return new ArtistResource($artist);
+    }
+
+    public function getArtistId(Request $request) : ArtistResource
+    {
+        $request->validate([
+            'artist' => 'required',
+        ]);
+
+        $artist = $request->input('artist');
+
+        return new ArtistResource(Artist::selectArtist($artist)); 
     }
 
     public function addArtist(Request $request) : string

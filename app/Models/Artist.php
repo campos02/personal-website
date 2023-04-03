@@ -23,7 +23,18 @@ class Artist extends Model
         return Artist::where('category', 'Other')->get();
     }
 
-    public static function selectArtist(string $id) : Artist
+    public static function selectArtist(string $artistName) : Artist
+    {
+        $artist = Artist::where('artist', $artistName)->first();
+
+        if (empty($artist)) {
+            throw new ModelNotFoundException('Artist not found');
+        } else {
+            return $artist;
+        }
+    }
+
+    public static function selectArtistById(string $id) : Artist
     {
         if (!$artist = Artist::find($id)) {
             throw new ModelNotFoundException('Artist not found');
@@ -55,7 +66,7 @@ class Artist extends Model
 
     public static function deleteArtistById(string $id) : string
     {
-        $artist = Artist::selectArtist($id);
+        $artist = Artist::selectArtistByID($id);
         $artistName = $artist->artist;
         $artist->delete();
 

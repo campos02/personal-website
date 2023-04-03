@@ -25,14 +25,14 @@ class AlbumsApiController extends Controller
 
     public function getArtistAlbums(string $artistId) : AnonymousResourceCollection
     {
-        $artist = Artist::selectArtist($artistId);
+        $artist = Artist::selectArtistById($artistId);
 
         return AlbumResource::collection($artist->albums);
     }
 
     public function getArtistAlbumById(string $artistId, string $albumId) : AlbumResource
     {
-        $album = Artist::selectArtist($artistId)->selectAlbum($albumId);
+        $album = Artist::selectArtistById($artistId)->selectAlbum($albumId);
 
         return new AlbumResource($album);
     }
@@ -44,7 +44,7 @@ class AlbumsApiController extends Controller
         ]);
         
         $album = $request->input('album');
-        $artist = Artist::selectArtist($artistId);
+        $artist = Artist::selectArtistById($artistId);
 
         return $artist->insertAlbum($album)->toJson();
     }
@@ -56,7 +56,7 @@ class AlbumsApiController extends Controller
         ]);
 
         $album = $request->input('album');
-        Artist::selectArtist($artistId)->deleteAlbum($album);
+        Artist::selectArtistById($artistId)->deleteAlbum($album);
 
         return response()->json([
             'result' => "$album removed"
@@ -65,7 +65,7 @@ class AlbumsApiController extends Controller
 
     public function removeAlbumById(string $artistId, string $albumId) : string
     {
-        $album = Artist::selectArtist($artistId)->deleteAlbumById($albumId);
+        $album = Artist::selectArtistById($artistId)->deleteAlbumById($albumId);
 
         return response()->json([
             'result' => "$album removed"
