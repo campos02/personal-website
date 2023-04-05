@@ -24,10 +24,10 @@ class ArtistsApiController extends Controller
     public function getArtistId(Request $request) : ArtistResource
     {
         $request->validate([
-            'artist' => 'required',
+            'name' => 'required',
         ]);
 
-        $artist = $request->input('artist');
+        $artist = $request->input('name');
 
         return new ArtistResource(Artist::selectArtist($artist)); 
     }
@@ -35,12 +35,12 @@ class ArtistsApiController extends Controller
     public function addArtist(Request $request) : string
     {
         $request->validate([
-            'artist' => 'required',
+            'name' => 'required',
             'category' => 'required',
             'albums' => 'array'
         ]);
         
-        $artist = $request->input('artist');
+        $artist = $request->input('name');
         $category = $request->input('category');
         $result = Artist::insertArtist($artist, $category);
 
@@ -56,10 +56,10 @@ class ArtistsApiController extends Controller
     public function removeArtist(Request $request) : string
     {
         $request->validate([
-            'artist' => 'required',
+            'name' => 'required',
         ]);
 
-        $artist = $request->input('artist');
+        $artist = $request->input('name');
         Artist::deleteArtist($artist);
 
         return response()->json([

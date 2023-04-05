@@ -25,7 +25,7 @@ class Artist extends Model
 
     public static function selectArtist(string $artistName) : Artist
     {
-        $artist = Artist::where('artist', $artistName)->first();
+        $artist = Artist::where('name', $artistName)->first();
 
         if (empty($artist)) {
             throw new ModelNotFoundException('Artist not found');
@@ -46,7 +46,7 @@ class Artist extends Model
     public static function insertArtist(string $artist, string $category) : Artist
     {
         $newArtist = new Artist;
-        $newArtist->artist = $artist;
+        $newArtist->name = $artist;
         $newArtist->category = $category;
         $newArtist->save();
         
@@ -55,7 +55,7 @@ class Artist extends Model
 
     public static function deleteArtist(string $artist)
     {
-        $artistToDelete = Artist::where('artist', $artist);
+        $artistToDelete = Artist::where('name', $artist);
 
         if ($artistToDelete->get()->isEmpty()) {
             throw new ModelNotFoundException('Artist not found');
@@ -67,7 +67,7 @@ class Artist extends Model
     public static function deleteArtistById(string $id) : string
     {
         $artist = Artist::selectArtistByID($id);
-        $artistName = $artist->artist;
+        $artistName = $artist->name;
         $artist->delete();
 
         return $artistName;
@@ -90,7 +90,7 @@ class Artist extends Model
     public function insertAlbum(string $album) : Album
     {
         $albumToAdd = new Album;
-        $albumToAdd->artist = $this->artist;
+        $albumToAdd->artist_name = $this->name;
         $albumToAdd->album = $album;
         $this->albums()->save($albumToAdd);
 

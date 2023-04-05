@@ -2,7 +2,7 @@
     <ul class="dark:text-zinc-300 space-y-2">
         @foreach ($artists as $artist)
             <li class="flex justify-center">
-                <div>{{ $artist->artist }}</div>
+                <div>{{ $artist->name }}</div>
                 @if (!$artist->albums->isEmpty())
                     <button class="group grid place-items-end">
                         <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">

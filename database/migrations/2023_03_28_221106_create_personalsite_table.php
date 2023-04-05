@@ -16,13 +16,13 @@ return new class extends Migration
     {
         Schema::create('albums', function (Blueprint $table) {
             $table->id();
-            $table->string('artist')->nullable();
+            $table->string('artist_name')->nullable();
             $table->string('album')->nullable();
         });
 
         Schema::create('artists', function (Blueprint $table) {
             $table->id();
-            $table->string('artist')->nullable();
+            $table->string('name')->nullable();
             $table->string('category', 20)->nullable();
         });
     }
