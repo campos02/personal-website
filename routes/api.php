@@ -25,6 +25,10 @@ Route::post('/token', [AuthController::class, 'createToken']);
 
 Route::get('/artists', [ArtistsApiController::class, 'getArtists']);
 
+Route::get('/artists/listening', [ArtistsApiController::class, 'getListeningArtists']);
+
+Route::get('/artists/other', [ArtistsApiController::class, 'getOtherArtists']);
+
 Route::get('/artists/{id}', [ArtistsApiController::class, 'getArtistById']);
 
 Route::get('/artists/{artistId}/albums', [AlbumsApiController::class, 'getArtistAlbums']);

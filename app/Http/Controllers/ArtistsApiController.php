@@ -14,6 +14,16 @@ class ArtistsApiController extends Controller
         return ArtistResource::collection(Artist::all());
     }
 
+    public function getListeningArtists() : AnonymousResourceCollection
+    {
+        return ArtistResource::collection(Artist::selectListeningArtists());
+    }
+
+    public function getOtherArtists() : AnonymousResourceCollection
+    {
+        return ArtistResource::collection(Artist::selectOtherArtists());
+    }
+
     public function getArtistById(string $id) : ArtistResource
     {
         $artist = Artist::selectArtistById($id);
