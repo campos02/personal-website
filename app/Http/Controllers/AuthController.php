@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -26,5 +27,27 @@ class AuthController extends Controller
         }
      
         return $user->createToken($request->username)->plainTextToken;
+    }
+
+    public function authenticate(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+            'remember' => 'boolean'
+        ]);
+ 
+        if (Auth::attempt($credentials, $credentials['remember'])) {
+            $request->session()->regenerate();
+        }
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+    
+        $request->session()->invalidate();
+    
+        $request->session()->regenerateToken();
     }
 }
