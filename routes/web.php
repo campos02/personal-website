@@ -20,7 +20,7 @@ Route::get('/', [HomeController::class, 'show']);
 
 Route::post('/login', [AuthController::class, 'authenticate']);
 
-Route::get('/logout', [AuthController::class, 'logout']);
+Route::middleware('auth:sanctum')->get('/logout', [AuthController::class, 'logout']);
 
 Route::view('/projects', 'projects');
 
