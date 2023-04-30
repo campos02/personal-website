@@ -9,6 +9,11 @@ use App\Models\Album;
 
 class ArtistsController extends Controller
 {
+    /**
+     * Gets each category's data and shows favorite artists page
+     *
+     * @return View
+     */
     public function show() : View
     {
         $listeningArtists = Artist::selectListeningArtists();

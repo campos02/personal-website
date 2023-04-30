@@ -8,6 +8,9 @@ use DateTime;
 
 class HomeController extends Controller
 {
+    /**
+     * Returns age based on birthday date and current date, GMT-3
+     */
     function returnAge()
     {
         date_default_timezone_set('America/Sao_Paulo');
@@ -18,6 +21,11 @@ class HomeController extends Controller
         return $age->y;
     }
 
+    /**
+     * Shows home page
+     *
+     * @return View
+     */
     public function show() : View
     {
         return view('home', [

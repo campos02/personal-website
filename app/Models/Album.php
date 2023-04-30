@@ -10,6 +10,12 @@ class Album extends Model
 {
     use HasFactory;
 
+    /**
+     * Finds and returns, if found, an album using its ID
+     *
+     * @param string $id
+     * @return Album
+     */
     public static function selectAlbum(string $id) : Album
     {
         if (!$album = Album::find($id)) {

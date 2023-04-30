@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
+    /**
+     * Creates the CSRF token
+     *
+     * @param Request $request
+     */
     public function createToken(Request $request)
     {
         $request->validate([
@@ -29,6 +34,11 @@ class AuthController extends Controller
         return $user->createToken($request->username)->plainTextToken;
     }
 
+    /**
+     * Authenticates an user
+     *
+     * @param Request $request
+     */
     public function authenticate(Request $request)
     {
         $credentials = $request->validate([
@@ -42,6 +52,11 @@ class AuthController extends Controller
         }
     }
 
+    /**
+     * Logs an user out
+     *
+     * @param Request $request
+     */
     public function logout(Request $request)
     {
         Auth::guard('web')->logout();
