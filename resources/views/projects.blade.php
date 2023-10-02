@@ -7,11 +7,11 @@
         <p >Some projects I've done over time. Their repositories can be found at my
         <a class="underline" href="https://github.com/campos02" target="_blank">GitHub</a> profile.</p>
         <div class="space-y-5">
-            <div class="grid space-y-1 place-items-center">
-                <h4 class="text-xl font-bold">UWPMessengerClient</h4>
+            <div class="img-title">
+                <h4 class="xl-bold">UWPMessengerClient</h4>
                 <img class="md:w-7/12 rounded-xl" src="images/loginscreen.jpg" alt="UWPMessengerClient login screen"/>
             </div>
-            <div class="dark:text-zinc-300 space-y-5">
+            <div class="text">
                 <p>
                     A UWP MSNP client. As stated in the README it's possible to choose between MSNP12 
                     and MSNP15. Managing your contact list and chatting are implemented in both versions, 
@@ -36,11 +36,11 @@
             </div>
         </div>
         <div class="space-y-5">
-            <div class="grid space-y-1 place-items-center">
-                <h4 class="text-xl font-bold">VerificarMudancasNoQ</h4>
+            <div class="img-title">
+                <h4 class="xl-bold">VerificarMudancasNoQ</h4>
                 <img class="md:w-1/2 rounded-xl" src="images/verificarqconfig.png" alt="VerificarMudancasNoQ config screen"/>
             </div>
-            <div class="dark:text-zinc-300 space-y-5">
+            <div class="text">
                 <p>
                     Basically a webscraper and page monitor. A sound is played every time changes are 
                     detected in a page. It sits in the system tray and can be configured by 

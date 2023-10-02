@@ -16,9 +16,9 @@
         <div class="grid h-screen drop-shadow-sm">
             <header class="self-start font-light text-xl dark:bg-stone-800 p-4 dark:border-neutral-600 border-b mb-6 flex justify-center">
                 <div class="space-x-8">
-                    <a class="dark:hover:text-white hover:text-zinc-400" href="/">Home</a>
-                    <a class="dark:hover:text-white hover:text-zinc-400" href="/projects">Projects</a>
-                    <a class="dark:hover:text-white hover:text-zinc-400" href="/favoriteartists">Favorite artists</a>
+                    <a class="header-link" href="/">Home</a>
+                    <a class="header-link" href="/projects">Projects</a>
+                    <a class="header-link" href="/favoriteartists">Favorite artists</a>
                 </div>
             </header>
             <div class="lg:px-72 px-2 grid justify-center">
@@ -30,8 +30,8 @@
                         Seems like you have no Javascript enabled... most of the website will still work but the features
                         below won't
                     </noscript>
-                    <a class="dark:hover:text-white hover:text-zinc-500" href="javascript:void(0)" id="backTopLink">Back to Top</a>
-                    <a class="dark:hover:text-white hover:text-zinc-500" href="javascript:void(0)" id="colorSwitcher">Switch to Light Mode</a>
+                    <a class="footer-link" href="javascript:void(0)" id="backTopLink">Back to Top</a>
+                    <a class="footer-link" href="javascript:void(0)" id="colorSwitcher">Switch to Light Mode</a>
                 </div>
             </footer>
             @vite('resources/js/footer.js')

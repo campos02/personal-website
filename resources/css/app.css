@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .header-link {
+        @apply dark:hover:text-white hover:text-zinc-400;
+    }
+
+    .footer-link {
+        @apply dark:hover:text-white hover:text-zinc-500;
+    }
+
+    .img-title {
+        @apply grid space-y-1 place-items-center;
+    }
+
+    .text {
+        @apply dark:text-zinc-300 space-y-5;
+    }
+
+    .xl-bold {
+        @apply text-xl font-bold;
+    }
+}
