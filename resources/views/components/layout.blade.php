@@ -24,12 +24,12 @@
             <div class="lg:px-72 px-2 grid justify-center">
                 {{ $slot }}
             </div>
-            <footer id="pageFooter" class="self-end dark:font-light text-xs pb-3 pt-16 dark:text-neutral-300 flex justify-center">
+            <footer id="pageFooter" class="self-end dark:font-light text-xs text-center pb-3 pt-16 dark:text-neutral-300 grid justify-center">
+                <noscript class="font-bold block">
+                    Seems like you have no Javascript enabled... most of the website will still work but the features
+                    below won't
+                </noscript>
                 <div class="space-x-4">
-                    <noscript class="font-bold">
-                        Seems like you have no Javascript enabled... most of the website will still work but the features
-                        below won't
-                    </noscript>
                     <a class="footer-link" href="javascript:void(0)" id="backTopLink">Back to Top</a>
                     <a class="footer-link" href="javascript:void(0)" id="colorSwitcher">Switch to Light Mode</a>
                 </div>
