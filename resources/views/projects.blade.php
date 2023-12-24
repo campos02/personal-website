@@ -11,32 +11,25 @@
         </p>
 
         <x-project>
-            <x-slot:title>UWPMessengerClient</x-slot:title>
+            <x-slot:title>AvaMSN</x-slot:title>
 
             <x-slot:img>
-                <img class="md:w-7/12 rounded-xl" src="images/loginscreen.jpg" alt="UWPMessengerClient login screen"/>
+                <img class="rounded-xl" src="images/avamsn.png" alt="AvaMSN login screen"/>
             </x-slot:img>
 
             <p>
-                A UWP MSNP client. As stated in the README it's possible to choose between MSNP12 
-                and MSNP15. Managing your contact list and chatting are implemented in both versions, 
-                as well as features like nudges(no window shaking, just a notification) and ink.
+                A cross-platform MSNP client. Still a work in progress, but it has a decent set of features.
             </p>
             <p>
-                MSNP was the procotol used by MSN Messenger, protocol versions mentioned above 
-                being used by versions 7.5 and 8.5 of the program, respectively.
-                Though Messenger has been dead for years now, there's a server called Escargot that
-                implements those MSNP versions and more, thus reviving both official and
-                third-party clients, e.g. this one.
+                MSNP was the protocol used by MSN Messenger, with this client using version 15 of the protocol.
+                Though Messenger has been dead for years now, there are third-party servers such as
+                <a class="underline" href="https://crosstalk.hiden.pw" target="_blank">CrossTalk</a> that
+                implement those MSNP versions and more, thus reviving official clients and working with old and new third-party
+                ones.
             </p>
             <p>
-                This was an MSNP and UWP learning project, as I was interested in 
-                both at the time. It is Windows-only, so the only compatible OS that doesn't have a 
-                better-functioning official client already is Windows for ARM, but even that is used by
-                very few people.
-            </p>
-            <p>
-                The project was made in C#.
+                This project was made with C# and Avalonia, and is available for Windows, Linux and MacOS
+                <a class="underline" href="https://github.com/campos02/AvaMSN" target="_blank">here</a>.
             </p>
         </x-project>
 
@@ -44,7 +37,7 @@
             <x-slot:title>VerificarMudancasNoQ</x-slot:title>
 
             <x-slot:img>
-                <img class="md:w-1/2 rounded-xl" src="images/verificarqconfig.png" alt="VerificarMudancasNoQ config screen"/>
+                <img class="rounded-xl" src="images/verificarqconfig.png" alt="VerificarMudancasNoQ config screen"/>
             </x-slot:img>
 
             <p>
@@ -68,7 +61,7 @@
             <x-slot:title>Artists API client</x-slot:title>
 
             <x-slot:img>
-                <img class="md:w-1/2 rounded-xl" src="images/artistsapiclient.png" alt="Artists API client main screen"/>
+                <img class="rounded-xl" src="images/artistsapiclient.png" alt="Artists API client main screen"/>
             </x-slot:img>
 
             <p>
@@ -80,7 +73,7 @@
                 main website.
             </p>
             <p>
-                Made using Vue.js because Vue is awesome.
+                Made using Vue.js.
             </p>
         </x-project>
 
@@ -88,7 +81,7 @@
             <x-slot:title>Power Bill Calculator</x-slot:title>
 
             <x-slot:img>
-                <img class="md:w-1/2 rounded-xl" src="images/powerbillcalculator.png" alt="Artists API client main screen"/>
+                <img class="rounded-xl" src="images/powerbillcalculator.png" alt="Artists API client main screen"/>
             </x-slot:img>
 
             <p>
@@ -101,7 +94,7 @@
                 which is accessed via the bottom left button. Configured values are saved locally.
             </p>
             <p>
-                It is made with C# and Avalonia(also awesome), and as a result can be run on Windows, Linux, macOS and Android.
+                It was made with C# and Avalonia and can be run on Windows, Linux, macOS and Android.
             </p>
         </x-project>
     </div>
