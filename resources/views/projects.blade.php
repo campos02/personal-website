@@ -78,23 +78,20 @@
         </x-project>
 
         <x-project>
-            <x-slot:title>Power Bill Calculator</x-slot:title>
+            <x-slot:title>Website Volume</x-slot:title>
 
             <x-slot:img>
-                <img class="rounded-xl" src="images/powerbillcalculator.png" alt="Artists API client main screen"/>
+                <img class="rounded-xl" src="images/websitevolume.png" alt="Website Volume popup"/>
             </x-slot:img>
 
             <p>
-                Why use a spreadsheet to calculate your bills when you can make a whole app? Results are displayed when any valid input
-                is typed in and the currency displayed is based on device region settings. For example, in the screenshot above the 
-                program uses brazilian reais because my pc has its region set to Brazil.
+                This is a currently in development, but mostly finished, extension that allows changing the volume of websites. It remembers the latest set value
+                even after closing the browser. Volume is stored in a per website basis, so multiple tabs in the same website have the same
+                volume.
             </p>
             <p>
-                Calculation uses the two inputs and configurable values kWh cost and taxes. Configuration is done in the settings page,
-                which is accessed via the bottom left button. Configured values are saved locally.
-            </p>
-            <p>
-                It was made with C# and Avalonia and can be run on Windows, Linux, macOS and Android.
+                Due to limitations in the APIs it uses though, a user needs to either click the extension icon or press Alt+Shift+S when
+                reopening the browser or opening a new tab in the same website.
             </p>
         </x-project>
     </div>
