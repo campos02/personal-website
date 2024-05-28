@@ -4,12 +4,34 @@ const pageFooter = document.getElementById("pageFooter");
 const colorSwitcher = document.getElementById("colorSwitcher");
 
 /**
- * Toggle dark mode classes
- * 
+ * Turns on dark mode if not enabled already
  */
-function changeColorMode()
+function darkMode()
 {
-    element.classList.toggle("dark");
+    colorSwitcher.innerText = "Switch to Light Mode";
+    if (!element.classList.contains("dark"))
+        element.classList.add("dark");
+}
+
+/**
+ * Turns on light mode if not enabled already
+ */
+function lightMode()
+{
+    colorSwitcher.innerText = "Switch to Dark Mode";
+    if (element.classList.contains("dark"))
+        element.classList.remove("dark");
+}
+
+/**
+ * Changes color mode according to the system color
+ */
+function systemColorMode()
+{
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)
+        lightMode();
+    else
+        darkMode();
 }
 
 // Split all cookie parameters
@@ -24,10 +46,14 @@ if (cookies != '')
         // Change to light mode if it's a light mode cookie
         if (colorMode.split('=')[1] == 'light') {
             colorSwitcher.innerText = "Switch to Dark Mode";
-            changeColorMode();
+            lightMode();
         }
     }
+    else
+        systemColorMode();
 }
+else
+    systemColorMode();
 
 const backTopLink = document.getElementById("backTopLink");
 
@@ -52,12 +78,11 @@ if (colorSwitcher !== null)
         // Create a light mode cookie if on dark mode or vice-versa
         if (element.classList.contains("dark")) {
             document.cookie = "colorMode=light;" + colorCookie;
-            colorSwitcher.innerText = "Switch to Dark Mode";
+            lightMode();
         }
         else {
             document.cookie = "colorMode=dark;" + colorCookie;
-            colorSwitcher.innerText = "Switch to Light Mode";
+            darkMode();
         }
-        changeColorMode();
     });
 }
