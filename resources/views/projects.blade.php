@@ -34,6 +34,28 @@
         </x-project>
 
         <x-project>
+            <x-slot:title>Website Volume</x-slot:title>
+
+            <x-slot:img>
+                <img class="rounded-xl" src="images/websitevolume.png" alt="Website Volume popup"/>
+            </x-slot:img>
+
+            <p>
+                This is an extension that allows changing the volume of websites. It remembers the latest set value
+                even after closing the browser. Volume is stored in a per website basis, so multiple tabs in the same website have the same
+                volume.
+            </p>
+            <p>
+                Due to limitations in the APIs it uses though, a user needs to either click the extension icon or press Alt+Shift+S when
+                reopening the browser or opening a new tab with the same website.
+            </p>
+            <p>
+                It is currently Chromium-only (couldn't find a way to properly do what it does on Firefox), open source and available
+                <a class="underline" href="https://chromewebstore.google.com/detail/website-volume/iapmlepgbakoijdigljffaehkgpffemi" target="_blank">at the Chrome Web Store</a>.
+            </p>
+        </x-project>
+
+        <x-project>
             <x-slot:title>VerificarMudancasNoQ</x-slot:title>
 
             <x-slot:img>
@@ -74,24 +96,6 @@
             </p>
             <p>
                 Made using Vue.js.
-            </p>
-        </x-project>
-
-        <x-project>
-            <x-slot:title>Website Volume</x-slot:title>
-
-            <x-slot:img>
-                <img class="rounded-xl" src="images/websitevolume.png" alt="Website Volume popup"/>
-            </x-slot:img>
-
-            <p>
-                This is a currently in development, but mostly finished, extension that allows changing the volume of websites. It remembers the latest set value
-                even after closing the browser. Volume is stored in a per website basis, so multiple tabs in the same website have the same
-                volume.
-            </p>
-            <p>
-                Due to limitations in the APIs it uses though, a user needs to either click the extension icon or press Alt+Shift+S when
-                reopening the browser or opening a new tab in the same website.
             </p>
         </x-project>
     </div>
