@@ -23,7 +23,7 @@
             <p>
                 MSNP was the protocol used by MSN Messenger, with this client using version 15 of the protocol.
                 Though Messenger has been dead for years now, there are third-party servers such as
-                <a class="underline" href="https://crosstalk.hiden.pw" target="_blank">CrossTalk</a> that
+                <a class="underline" href="https://crosstalk.hiden.cc" target="_blank">CrossTalk</a> that
                 implement those MSNP versions and more, thus reviving official clients and working with old and new third-party
                 ones.
             </p>
