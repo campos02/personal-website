@@ -3,10 +3,10 @@
         Projects
     </x-slot:title>
 
-    <div class="space-y-14 text-center">
+    <div class="projects">
         <p>
             Some of the programming projects I've done. Their repositories can be found at my
-            <a class="underline" href="https://github.com/campos02" target="_blank">GitHub</a> profile, if they're not private.
+            <a class="underlined-link" href="https://github.com/campos02" target="_blank">GitHub</a> profile, if they're not private.
             The source code for this website can also be found there.
         </p>
 
@@ -14,7 +14,7 @@
             <x-slot:title>AvaMSN</x-slot:title>
 
             <x-slot:img>
-                <img class="rounded-xl" src="images/avamsn.png" alt="AvaMSN login screen"/>
+                <img src="images/avamsn.png" alt="AvaMSN login screen"/>
             </x-slot:img>
 
             <p>
@@ -23,13 +23,13 @@
             <p>
                 MSNP was the protocol used by MSN Messenger, with this client using version 15 of the protocol.
                 Though Messenger has been dead for years now, there are third-party servers such as
-                <a class="underline" href="https://crosstalk.hiden.cc" target="_blank">CrossTalk</a> that
+                <a class="underlined-link" href="https://crosstalk.hiden.cc" target="_blank">CrossTalk</a> that
                 implement those MSNP versions and more, thus reviving official clients and working with old and new third-party
                 ones.
             </p>
             <p>
                 This project was made with C# and Avalonia, and is available for Windows, Linux and MacOS
-                <a class="underline" href="https://github.com/campos02/AvaMSN" target="_blank">here</a>.
+                <a class="underlined-link" href="https://github.com/campos02/AvaMSN" target="_blank">here</a>.
             </p>
         </x-project>
 
@@ -37,7 +37,7 @@
             <x-slot:title>Website Volume</x-slot:title>
 
             <x-slot:img>
-                <img class="rounded-xl" src="images/websitevolume.png" alt="Website Volume popup"/>
+                <img src="images/websitevolume.png" alt="Website Volume popup"/>
             </x-slot:img>
 
             <p>
@@ -51,7 +51,7 @@
             </p>
             <p>
                 It is currently Chromium-only (couldn't find a way to properly do what it does on Firefox), open source and available
-                <a class="underline" href="https://chromewebstore.google.com/detail/website-volume/iapmlepgbakoijdigljffaehkgpffemi" target="_blank">at the Chrome Web Store</a>.
+                <a class="underlined-link" href="https://chromewebstore.google.com/detail/website-volume/iapmlepgbakoijdigljffaehkgpffemi" target="_blank">at the Chrome Web Store</a>.
             </p>
         </x-project>
 
@@ -59,7 +59,7 @@
             <x-slot:title>VerificarMudancasNoQ</x-slot:title>
 
             <x-slot:img>
-                <img class="rounded-xl" src="images/verificarqconfig.png" alt="VerificarMudancasNoQ config screen"/>
+                <img src="images/verificarqconfig.png" alt="VerificarMudancasNoQ config screen"/>
             </x-slot:img>
 
             <p>
@@ -83,7 +83,7 @@
             <x-slot:title>Artists API client</x-slot:title>
 
             <x-slot:img>
-                <img class="rounded-xl" src="images/artistsapiclient.png" alt="Artists API client main screen"/>
+                <img src="images/artistsapiclient.png" alt="Artists API client main screen"/>
             </x-slot:img>
 
             <p>

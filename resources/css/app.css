@@ -1,25 +1,106 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+    --bg-color: #e7e7e7;
+    --bg-color-dark: #212121;
+    --text-color-dark: #e0e0e0;
+}
 
-@layer components {
-    .header-link {
-        @apply dark:hover:text-white hover:text-zinc-400;
+body {
+    margin: 0;
+    padding: 0;
+    scrollbar-width: thin;
+    font-family: Inter;
+    background-color: var(--bg-color);
+    filter: drop-shadow(0 0 0.8rem #a5a5a5);
+}
+
+.dark body {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+    filter: drop-shadow(0 0 1rem black);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #575757;
+}
+
+.dark a {
+    color: var(--text-color-dark);
+}
+
+.dark a:hover {
+    color: white;
+}
+
+.underlined-link {
+    text-decoration: underline;
+}
+
+.wrapper {
+    display: grid;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    place-self: start stretch;
+    text-align: center;
+    font-size: larger;
+    padding: 1rem;
+    background-color: #e2e2e2;
+    border-bottom: 0.1rem solid #6d6d6d56;
+}
+
+.dark header {
+    background-color: #1a1919;
+    border-bottom: 0.1rem solid #ffffff48;
+}
+
+.header-link {
+    margin-left: 2rem;
+}
+
+.main-content {
+    justify-self: center;
+    padding: 1rem 20rem 2rem 20rem;
+    display: grid;
+}
+
+footer {
+    place-self: end stretch;
+    text-align: center;
+    font-size: small;
+    padding-bottom: 0.75rem;
+}
+
+noscript {
+    display: block;
+    padding: 0.5rem;
+}
+
+.footer-link {
+    margin-left: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+img {
+    max-width: 1000px;
+}
+
+@media (max-width: 1300px) {
+    .main-content {
+        padding: 1rem 2rem 2rem 2rem;
     }
 
-    .footer-link {
-        @apply dark:hover:text-white hover:text-zinc-500;
-    }
-
-    .img-title {
-        @apply grid space-y-1 place-items-center;
-    }
-
-    .text {
-        @apply dark:text-zinc-300 space-y-5;
-    }
-
-    .xl-bold {
-        @apply text-xl font-bold;
+    img {
+        max-width: 19rem;
     }
 }

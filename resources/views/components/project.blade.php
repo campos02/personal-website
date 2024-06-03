@@ -1,9 +1,9 @@
-<div class="space-y-5">
-    <div class="img-title">
-        <h4 class="xl-bold">{{ $title }}</h4>
+<div class="project">
+    <div class="project-img">
+        <h3 class="project-name">{{ $title }}</h3>
         {{ $img }}
     </div>
-    <div class="text">
+    <div>
         {{ $slot }}
     </div>
 </div>

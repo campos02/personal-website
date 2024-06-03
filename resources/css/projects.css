@@ -1,0 +1,16 @@
+.projects {
+    text-align: center;
+}
+
+.project {
+    margin-top: 3rem;
+}
+
+.project-img {
+    display: grid;
+    place-content: center;
+}
+
+.project-name {
+    margin-bottom: 0.5rem;
+}

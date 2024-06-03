@@ -1,0 +1,57 @@
+.artists {
+    text-align: center;
+}
+
+.artist-list {
+    margin-top: -0.6rem;
+}
+
+.artist {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.albums-button {
+    display: grid;
+    place-items: end;
+    background: none;
+    border: none;
+}
+
+.albums-svg {
+    width: 1rem;
+    height: 1rem;
+    color: black;
+}
+
+.dark .albums-svg {
+    color: var(--text-color-dark);
+}
+
+.albums {
+    position: absolute;
+    background-color: var(--bg-color);
+    font-family: Inter;
+    font-size: small;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.07s ease-in;
+}
+
+.dark .albums {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+.favorite-albums {
+    margin-top: 0;
+    font-size: medium;
+}
+
+.show-albums {
+    transform:scaleY(1);
+}

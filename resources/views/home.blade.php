@@ -3,11 +3,11 @@
         campos' website
     </x-slot:title>
 
-    <div class="text-lg place-self-center text-center">
+    <div class="introduction">
         <p>Hey, I'm campos and this is my personal website</p>
-        <div class="m-4">
-            <h1 class="text-3xl font-bold">A short bio</h1>
-            <p class="mt-1 dark:text-zinc-300">
+        <div>
+            <h1>A short bio</h1>
+            <p class="bio">
                 I'm a {{ $age }} year old brazilian interested in programming, electronics and music. I'm also a Computer Science student.
             </p>
         </div>
