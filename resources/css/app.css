@@ -48,6 +48,8 @@ a:hover {
 
 header {
     place-self: start stretch;
+    display: flex;
+    justify-content: center;
     text-align: center;
     font-size: larger;
     padding: 1rem;

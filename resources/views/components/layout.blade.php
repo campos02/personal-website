@@ -18,11 +18,9 @@
     <body>
         <div class="wrapper">
             <header>
-                <div>
-                    <a class="header-link" href="/">Home</a>
-                    <a class="header-link" href="/projects">Projects</a>
-                    <a class="header-link" href="/favoriteartists">Favorite artists</a>
-                </div>
+                <a class="header-link" href="/">Home</a>
+                <a class="header-link" href="/projects">Projects</a>
+                <a class="header-link" href="/favoriteartists">Favorite artists</a>
             </header>
             <div class="main-content">
                 {{ $slot }}
