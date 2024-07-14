@@ -20,13 +20,14 @@
             <nav class="centered-text">
                 <a class="home-link" href="/">Home</a>
                 <div class="pages actions">
+                    <a href="/about">About me</a>
                     <a href="/projects">Projects</a>
                     <a href="/listening">Listening</a>
                 </div>
             </nav>
-            <div class="main-content">
+            <main class="main-content">
                 {{ $slot }}
-            </div>
+            </main>
             <footer id="pageFooter">
                 <noscript>
                     Seems like you have no Javascript enabled... most of the website will still work but you will be missing some features.

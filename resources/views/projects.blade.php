@@ -9,7 +9,7 @@
         The source code for this website can also be found there and is MIT licensed, as are the other open source projects.
     </p>
 
-    <div class="projects centered-text">
+    <div class="vertical-gaps centered-text">
         <x-project>
             <x-slot:title>AvaMSN</x-slot:title>
 

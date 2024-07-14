@@ -25,3 +25,5 @@ Route::middleware('auth:sanctum')->get('/logout', [AuthController::class, 'logou
 Route::view('/projects', 'projects');
 
 Route::get('/listening', [ArtistsController::class, 'show']);
+
+Route::view('/about', 'about');

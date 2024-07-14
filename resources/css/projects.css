@@ -1,8 +1,3 @@
-.projects {
-    display: grid;
-    gap: 3rem;
-}
-
 .project-img {
     filter: drop-shadow(0 0 0.3rem var(--drop-shadow-color));
     border-radius: 0.4rem;

@@ -1,3 +1,4 @@
+/* Variables */
 :root {
     --bg-color: #e7e7e7;
     --bg-color-dark: #212121;
@@ -11,10 +12,36 @@
     --hover-color-dark: #fd8e8e;
 }
 
+/* Utility classes */
 .centered-text {
     text-align: center;
 }
 
+.vertical-gaps {
+    display: grid;
+    gap: 3rem;
+}
+
+.red-background {
+    background-color: #aa2121d1;
+    border-radius: 0.4rem;
+    color: white;
+}
+
+.red-color {
+    color: #bd2e2e;
+}
+
+.actions a {
+    color: var(--text-color);
+}
+
+.actions a:hover {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* Website */
 body {
     margin: 0;
     padding: 0;
@@ -73,28 +100,9 @@ noscript {
     padding: 0.5rem;
 }
 
-.actions a {
-    color: var(--text-color);
-}
-
-.actions a:hover {
-    color: var(--link-color);
-    text-decoration: none;
-}
-
 .footer-links {
     display: flex;
     justify-content: center;
-}
-
-.red-background {
-    background-color: #aa2121d1;
-    border-radius: 0.4rem;
-    color: white;
-}
-
-.red-color {
-    color: #bd2e2e;
 }
 
 ul {
