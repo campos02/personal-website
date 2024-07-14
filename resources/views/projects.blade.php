@@ -3,18 +3,18 @@
         Projects
     </x-slot:title>
 
-    <div class="projects">
-        <p>
-            Some of the programming projects I've done. Their repositories can be found at my
-            <a class="underlined-link" href="https://github.com/campos02" target="_blank">GitHub</a> profile, if they're not private.
-            The source code for this website can also be found there.
-        </p>
+    <p class="centered-text">
+        Some of the programming projects I've done. Their repositories can be found at my
+        <a href="https://github.com/campos02" target="_blank">GitHub</a> profile, if they're not private.
+        The source code for this website can also be found there and is MIT licensed, as are the other open source projects.
+    </p>
 
+    <div class="projects centered-text">
         <x-project>
             <x-slot:title>AvaMSN</x-slot:title>
 
             <x-slot:img>
-                <img src="images/avamsn.png" alt="AvaMSN login screen"/>
+                <img src="images/avamsn.png" alt="AvaMSN login screen" class="project-img"/>
             </x-slot:img>
 
             <p>
@@ -23,13 +23,13 @@
             <p>
                 MSNP was the protocol used by MSN Messenger, with this client using version 15 of the protocol.
                 Though Messenger has been dead for years now, there are third-party servers such as
-                <a class="underlined-link" href="https://crosstalk.hiden.cc" target="_blank">CrossTalk</a> that
+                <a href="https://crosstalk.hiden.cc" target="_blank">CrossTalk</a> that
                 implement those MSNP versions and more, thus reviving official clients and working with old and new third-party
                 ones.
             </p>
             <p>
                 This project was made with C# and Avalonia, and is available for Windows, Linux and MacOS
-                <a class="underlined-link" href="https://github.com/campos02/AvaMSN" target="_blank">here</a>.
+                <a href="https://github.com/campos02/AvaMSN" target="_blank">here</a>.
             </p>
         </x-project>
 
@@ -37,7 +37,7 @@
             <x-slot:title>Website Volume</x-slot:title>
 
             <x-slot:img>
-                <img src="images/websitevolume.png" alt="Website Volume popup"/>
+                <img src="images/websitevolume.png" alt="Website Volume popup" class="project-img"/>
             </x-slot:img>
 
             <p>
@@ -51,7 +51,7 @@
             </p>
             <p>
                 It is currently Chromium-only (couldn't find a way to properly do what it does on Firefox), open source and available
-                <a class="underlined-link" href="https://chromewebstore.google.com/detail/website-volume/iapmlepgbakoijdigljffaehkgpffemi" target="_blank">at the Chrome Web Store</a>.
+                <a href="https://chromewebstore.google.com/detail/website-volume/iapmlepgbakoijdigljffaehkgpffemi" target="_blank">at the Chrome Web Store</a>.
             </p>
         </x-project>
 
@@ -59,7 +59,7 @@
             <x-slot:title>VerificarMudancasNoQ</x-slot:title>
 
             <x-slot:img>
-                <img src="images/verificarqconfig.png" alt="VerificarMudancasNoQ config screen"/>
+                <img src="images/verificarqconfig.png" alt="VerificarMudancasNoQ config screen" class="project-img"/>
             </x-slot:img>
 
             <p>
@@ -83,7 +83,7 @@
             <x-slot:title>Artists API client</x-slot:title>
 
             <x-slot:img>
-                <img src="images/artistsapiclient.png" alt="Artists API client main screen"/>
+                <img src="images/artistsapiclient.png" alt="Artists API client main screen" class="project-img"/>
             </x-slot:img>
 
             <p>
@@ -91,8 +91,8 @@
                 artists and their albums from the database. Way better than adding records or making requests manually, like I used to.
             </p>
             <p>
-                The app requires a login and is available at a subdomain. As can be seen in the image it is themed similarly to the 
-                main website.
+                The app requires a login and is available at a 
+                <a href="https://client.campos02.me/">subdomain</a>. As the image shows it is themed similarly to the main website.
             </p>
             <p>
                 Made using Vue.js.

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="dark">
+<html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,22 +17,22 @@
     </head>
     <body>
         <div class="wrapper">
-            <header>
-                <a class="header-link" href="/">Home</a>
-                <a class="header-link" href="/projects">Projects</a>
-                <a class="header-link" href="/favoriteartists">Favorite artists</a>
-            </header>
+            <nav class="centered-text">
+                <a class="home-link" href="/">Home</a>
+                <div class="pages actions">
+                    <a href="/projects">Projects</a>
+                    <a href="/listening">Listening</a>
+                </div>
+            </nav>
             <div class="main-content">
                 {{ $slot }}
             </div>
             <footer id="pageFooter">
                 <noscript>
-                    Seems like you have no Javascript enabled... most of the website will still work but the features
-                    below won't
+                    Seems like you have no Javascript enabled... most of the website will still work but you will be missing some features.
                 </noscript>
-                <div>
-                    <a class="footer-link" href="javascript:void(0)" id="backTopLink">Back to Top</a>
-                    <a class="footer-link" href="javascript:void(0)" id="colorSwitcher">Switch to Light Mode</a>
+                <div class="actions footer-links">
+                    <a href="javascript:void(0)" id="backTopLink">Back to Top</a>
                 </div>
             </footer>
             @vite('resources/js/footer.js')

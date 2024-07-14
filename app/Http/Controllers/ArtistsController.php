@@ -19,7 +19,7 @@ class ArtistsController extends Controller
         $listeningArtists = Artist::selectListeningArtists();
         $otherArtists = Artist::selectOtherArtists();
 
-        return view('favoriteartists', [
+        return view('listening', [
             'listeningArtists' => $listeningArtists,
             'otherArtists' => $otherArtists,
         ]);

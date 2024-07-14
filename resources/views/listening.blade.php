@@ -1,9 +1,9 @@
 <x-layout>
     <x-slot:title>
-        Favorite Artists
+        Currently listening...
     </x-slot:title>
 
-    <div class="artists">
+    <div class="artists centered-text">
         <h3>Currently listening to*:</h3>
         <x-artist-list :artists="$listeningArtists"/>
         <h4>And more...</h4>

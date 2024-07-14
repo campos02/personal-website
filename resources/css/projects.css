@@ -1,16 +1,20 @@
 .projects {
-    text-align: center;
-}
-
-.project {
-    margin-top: 3rem;
+    display: grid;
+    gap: 3rem;
 }
 
 .project-img {
-    display: grid;
-    place-content: center;
+    filter: drop-shadow(0 0 0.3rem var(--drop-shadow-color));
+    border-radius: 0.4rem;
 }
 
 .project-name {
     margin-bottom: 0.5rem;
+    color: #ececec;
+}
+
+@media (prefers-color-scheme: dark) {
+    .project-img {
+        filter: drop-shadow(0 0 0.4rem var(--drop-shadow-color-dark));
+    }
 }
