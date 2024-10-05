@@ -28,7 +28,7 @@ services:
             - website
         networks:
             - internal
-    mysql:
+    mariadb:
         image: mariadb
         environment:
             MARIADB_ROOT_PASSWORD: ${DB_PASSWORD}
