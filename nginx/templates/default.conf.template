@@ -1,0 +1,55 @@
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name ${SERVER_NAME} www.${SERVER_NAME};
+    server_tokens off;
+
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+    }
+
+    location / {
+        return 301 https://${SERVER_NAME}$request_uri;
+    }
+}
+
+server {
+    listen [::]:443 ssl;
+    listen 443 ssl;
+    server_name ${SERVER_NAME} www.${SERVER_NAME} default_server;
+    
+    ssl_certificate /etc/nginx/ssl/live/${SERVER_NAME}/fullchain.pem;
+    ssl_certificate_key /etc/nginx/ssl/live/${SERVER_NAME}/privkey.pem;
+    include /etc/nginx/ssl-conf/options-ssl-nginx.conf;
+    ssl_dhparam /etc/nginx/ssl-conf/ssl-dhparams.pem;
+
+    server_tokens off;
+    root /var/www/personal-website/public;
+ 
+    add_header X-Frame-Options "SAMEORIGIN";
+    add_header X-Content-Type-Options "nosniff";
+ 
+    index index.php;
+ 
+    charset utf-8;
+ 
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+ 
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location = /robots.txt  { access_log off; log_not_found off; }
+ 
+    error_page 404 /index.php;
+ 
+    location ~ \.php$ {
+        fastcgi_pass website:9000;
+        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+ 
+    location ~ /\.(?!well-known).* {
+        deny all;
+    }
+}
