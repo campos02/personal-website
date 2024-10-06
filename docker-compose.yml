@@ -4,7 +4,7 @@ services:
         environment:
             IGNITION_LOCAL_SITES_PATH: ${PWD}
         volumes:
-            - .:/var/www/personal-website
+            - website-data:/var/www/personal-website
         networks:
             - internal
         depends_on:
@@ -19,7 +19,7 @@ services:
         environment:
             SERVER_NAME: ${SERVER_NAME}
         volumes:
-            - .:/var/www/personal-website
+            - website-data:/var/www/personal-website
             - ./nginx/templates:/etc/nginx/templates
             - ./nginx/ssl-conf:/etc/nginx/ssl-conf
             - ./certbot/www:/var/www/certbot/:ro
@@ -43,11 +43,11 @@ services:
     certbot:
         image: certbot/certbot
         volumes:
-            - ./certbot/www/:/var/www/certbot/:rw
-            - ./certbot/conf/:/etc/letsencrypt/:rw
+            - ./certbot/www/:/var/www/certbot/
+            - ./certbot/conf/:/etc/letsencrypt/
 networks:
     internal:
         driver: bridge
 volumes:
     mysql-data:
-        driver: local
+    website-data:
