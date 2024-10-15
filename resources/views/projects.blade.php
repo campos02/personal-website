@@ -3,6 +3,10 @@
         Projects
     </x-slot:title>
 
+    <x-slot:resources>
+        @vite('resources/css/projects.css')
+    </x-slot:resources>
+
     <p class="centered-text">
         Some of the programming projects I've done. Their repositories can be found at my
         <a href="https://github.com/campos02" target="_blank">GitHub</a> profile, if they're not private.
@@ -91,8 +95,7 @@
                 artists and their albums from the database. Way better than adding records or making requests manually, like I used to.
             </p>
             <p>
-                The app requires a login and is available at a 
-                <a href="https://client.campos02.me/">subdomain</a>. As the image shows it is themed similarly to the main website.
+                The app requires a login and is available at a subdomain. As the image shows it is themed similarly to the main website.
             </p>
             <p>
                 Made using Vue.js.

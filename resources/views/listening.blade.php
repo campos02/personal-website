@@ -3,6 +3,10 @@
         Currently listening...
     </x-slot:title>
 
+    <x-slot:resources>
+        @vite('resources/css/artists.css')
+    </x-slot:resources>
+
     <div class="artists centered-text">
         <h3>Currently listening to*:</h3>
         <x-artist-list :artists="$listeningArtists"/>

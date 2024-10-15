@@ -11,9 +11,7 @@
         <meta property="og:title" content="campos' website">
         <meta property="og:description" content="My personal website">
         @vite('resources/css/app.css')
-        @vite('resources/css/home.css')
-        @vite('resources/css/projects.css')
-        @vite('resources/css/artists.css')
+        {{ $resources ?? ''}}
     </head>
     <body>
         <div class="wrapper">

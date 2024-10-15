@@ -1,7 +1,7 @@
 <x-layout>
-    <x-slot:title>
-        campos' website
-    </x-slot:title>
+    <x-slot:resources>
+        @vite('resources/css/home.css')
+    </x-slot:resources>
 
     <div class="introduction centered-text">
         <div>Hey, I'm campos and this is my personal website.</div>
