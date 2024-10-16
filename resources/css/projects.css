@@ -1,3 +1,7 @@
+.projects {
+    font-size: 1.025rem;
+}
+
 .project-img {
     filter: drop-shadow(0 0 0.3rem var(--drop-shadow-color));
     border-radius: 0.4rem;
@@ -5,11 +9,16 @@
 
 .project-name {
     margin-bottom: 0.5rem;
-    color: #ececec;
 }
 
 @media (prefers-color-scheme: dark) {
     .project-img {
         filter: drop-shadow(0 0 0.4rem var(--drop-shadow-color-dark));
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .project-name {
+        color: #000000de;
     }
 }

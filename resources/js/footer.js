@@ -11,3 +11,13 @@ if (backTopLink !== null)
         });
     });
 }
+
+const wrapper = document.getElementById("vhWrapper");
+
+// Show footer links only if the page overflows
+if (wrapper.scrollHeight > wrapper.clientHeight) {
+    const footerLinks = document.getElementsByClassName("footer-links");
+    Array.from(footerLinks).forEach(footerLinksElement => {
+        footerLinksElement.classList.add("visible-footer-links");
+    });
+}

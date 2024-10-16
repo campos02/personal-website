@@ -7,13 +7,7 @@
         @vite('resources/css/projects.css')
     </x-slot:resources>
 
-    <p class="centered-text">
-        Some of the programming projects I've done. Their repositories can be found at my
-        <a href="https://github.com/campos02" target="_blank">GitHub</a> profile, if they're not private.
-        The source code for this website can also be found there and is MIT licensed, as are the other open source projects.
-    </p>
-
-    <div class="vertical-gaps centered-text">
+    <div class="vertical-gaps centered-text projects">
         <x-project>
             <x-slot:title>AvaMSN</x-slot:title>
 
@@ -46,7 +40,7 @@
 
             <p>
                 This is an extension that allows changing the volume of websites. It remembers the latest set value
-                even after closing the browser. Volume is stored in a per website basis, so multiple tabs in the same website have the same
+                even after the browser is closed. Volume is stored in a per website basis, so multiple tabs in the same website have the same
                 volume.
             </p>
             <p>

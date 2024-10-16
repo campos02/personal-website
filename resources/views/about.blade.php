@@ -4,7 +4,7 @@
     </x-slot:title>
 
     <div class="centered-text">
-        <h2>A longer bio</h2>
+        <h2>A bio</h2>
         <p>
             I'm a first year Computer Science student who is currently working at a local ISP. It's exhausting, but I've been managing
             to do both so far. My job involves, among other things, provisioning and configuring new customer equipment placed by the ISP's
