@@ -9,6 +9,7 @@ export default defineConfig({
                 'resources/css/home.css',
                 'resources/css/projects.css',
                 'resources/css/artists.css',
+                'resources/css/fonts.css',
                 'resources/js/footer.js',
                 'resources/js/albums.js'
             ],
