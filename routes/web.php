@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArtistsController;
 use App\Http\Controllers\AuthController;
 
@@ -16,7 +16,7 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::get('/', [HomeController::class, 'show']);
+Route::view('/', 'home');
 
 Route::post('/login', [AuthController::class, 'authenticate']);
 
@@ -26,4 +26,4 @@ Route::view('/projects', 'projects');
 
 Route::get('/listening', [ArtistsController::class, 'show']);
 
-Route::view('/about', 'about');
+Route::get('/about', [AboutController::class, 'show']);

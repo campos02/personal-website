@@ -48,8 +48,8 @@
                 reopening the browser or opening a new tab with the same website.
             </p>
             <p>
-                It is currently Chromium-only (couldn't find a way to properly do what it does on Firefox), open source and available
-                <a href="https://chromewebstore.google.com/detail/website-volume/iapmlepgbakoijdigljffaehkgpffemi" target="_blank">at the Chrome Web Store</a>.
+                It is currently Chromium-only (couldn't find a way to properly do what it does on Firefox), open source and<br> available
+                <a href="https://chromewebstore.google.com/detail/website-volume/iapmlepgbakoijdigljffaehkgpffemi" target="_blank">in the Chrome Web Store</a>.
             </p>
         </x-project>
 
