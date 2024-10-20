@@ -14,7 +14,7 @@
             programming, networking and music.
         </p>
         <p>
-            Two years ago, before entering University, I finished a high school that also provided me a technical electronics course.
+            In 2022, before entering University, I finished a high school that also provided me a technical electronics course.
         </p>
         <p>
             Since then I've also been working at a local ISP, my first job. It involves, among other things, provisioning and configuring
