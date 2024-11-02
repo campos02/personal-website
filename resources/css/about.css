@@ -14,24 +14,19 @@
     border-radius: 0.3rem;
     font-weight: normal;
     filter: drop-shadow(0 0 0.05rem var(--drop-shadow-color));
+    color: var(--text-color-dark);
+}
+
+.socials svg {
+    height: 1.5rem;
 }
 
 .bluesky, .bluesky:hover {
     background-color: #2194ff;
-    color: var(--text-color-dark);
 }
 
-.bluesky svg {
-    height: 1.5rem;
-}
-
-.github, .github:hover {
+.github, .github:hover, .email, .email:hover {
     background-color: #2f2f2f;
-    color: var(--text-color-dark);
-}
-
-.github svg {
-    height: 1.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
