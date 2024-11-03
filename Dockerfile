@@ -25,7 +25,7 @@ RUN useradd -u 1000 -ms /bin/bash -g www www
 COPY --chown=www:www . /var/www/personal-website
 RUN chown www:www /var/www/personal-website
 
-RUN composer install --optimize-autoloader --no-dev
+RUN composer install --no-dev
 RUN npm install
 RUN npm run build
 
