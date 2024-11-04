@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Artist;
 use App\Http\Resources\ArtistResource;
+use App\Http\Resources\ArtistCollection;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class ArtistsApiController extends Controller
@@ -12,31 +13,31 @@ class ArtistsApiController extends Controller
     /**
      * Gets all artists
      *
-     * @return AnonymousResourceCollection
+     * @return ArtistCollection
      */
-    public function getArtists() : AnonymousResourceCollection
+    public function getArtists() : ArtistCollection
     {
-        return ArtistResource::collection(Artist::all());
+        return new ArtistCollection(Artist::all());
     }
 
     /**
      * Gets all artists in the Listening category
      *
-     * @return AnonymousResourceCollection
+     * @return ArtistCollection
      */
-    public function getListeningArtists() : AnonymousResourceCollection
+    public function getListeningArtists() : ArtistCollection
     {
-        return ArtistResource::collection(Artist::selectListeningArtists());
+        return new ArtistCollection(Artist::selectListeningArtists());
     }
 
     /**
      * Gets all artists in the Other category
      *
-     * @return AnonymousResourceCollection
+     * @return ArtistCollection
      */
-    public function getOtherArtists() : AnonymousResourceCollection
+    public function getOtherArtists() : ArtistCollection
     {
-        return ArtistResource::collection(Artist::selectOtherArtists());
+        return new ArtistCollection(Artist::selectOtherArtists());
     }
 
     /**
@@ -48,7 +49,6 @@ class ArtistsApiController extends Controller
     public function getArtistById(string $id) : ArtistResource
     {
         $artist = Artist::selectArtistById($id);
-
         return new ArtistResource($artist);
     }
 
@@ -65,7 +65,6 @@ class ArtistsApiController extends Controller
         ]);
 
         $artist = $request->input('name');
-
         return new ArtistResource(Artist::selectArtist($artist)); 
     }
 
@@ -75,25 +74,26 @@ class ArtistsApiController extends Controller
      * @param Request $request
      * @return string
      */
-    public function addArtist(Request $request) : string
+    public function addArtists(Request $request) : string
     {
         $request->validate([
-            'name' => 'required',
-            'category' => 'required',
-            'albums' => 'array'
+            'artists.*.name' => 'required',
+            'artists.*.category' => 'required',
+            'artists.*.albums' => 'array'
         ]);
-        
-        $artist = $request->input('name');
-        $category = $request->input('category');
-        $result = Artist::insertArtist($artist, $category);
 
-        if ($albums = $request->input('albums')) {
-            foreach ($albums as $album) {
-                $result->insertAlbum($album);
+        $artists = $request->input('artists.*');
+        foreach ($artists as $artist) {
+            $result = Artist::insertArtist($artist['name'], $artist['category']);
+
+            if (isset($artist['albums'])) {
+                foreach ($artist['albums'] as $album) {
+                    $result->insertAlbum($album['album']);
+                }
             }
         }
 
-        return $result->toJson();
+        return response()->json($artists);
     }
 
     /**
@@ -125,7 +125,6 @@ class ArtistsApiController extends Controller
     public function removeArtistById(string $id) : string
     {
         $artistName = Artist::deleteArtistById($id);
-
         return response()->json([
             'result' => "$artistName removed"
         ]);
