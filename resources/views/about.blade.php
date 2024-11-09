@@ -14,12 +14,12 @@
             programming, networking and music.
         </p>
         <p>
-            In 2022, before entering University, I finished a high school that also provided me a technical electronics course.
+            Before entering University I finished a high school that also provided me a technical electronics course.
         </p>
         <p>
-            Since then I've also been working at a local ISP, my first job. It involves, among other things, provisioning and configuring
-            customer equipment placed by the ISP's technicians, who call me and my team to solve trickier situations as well, so things
-            can get quite technical at times.
+            From 2022 to 2024 I worked at a local ISP, my first job. It involved, among other things, provisioning and configuring
+            customer equipment placed by the ISP's technicians, who called me and my team to solve trickier situations as well, so things
+            could get quite technical at times.
         </p>
         <p>
             I program as a hobby too. My projects page can be found at the navbar on top of every page.
