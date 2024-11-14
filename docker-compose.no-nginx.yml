@@ -1,0 +1,29 @@
+services:
+    website:
+        build: .
+        environment:
+            IGNITION_LOCAL_SITES_PATH: ${PWD}
+        volumes:
+            - website-data:/var/www/personal-website
+        networks:
+            - internal
+        depends_on:
+            - mariadb
+    mariadb:
+        image: mariadb
+        environment:
+            MARIADB_ROOT_PASSWORD: ${DB_PASSWORD}
+            MARIADB_DATABASE: ${DB_DATABASE}
+            MARIADB_USER: ${DB_USERNAME}
+            MARIADB_PASSWORD: ${DB_PASSWORD}
+        volumes:
+            - mysql-data:/var/lib/mysql
+            - ./mariadb:/etc/mysql/conf.d/
+        networks:
+            - internal
+networks:
+    internal:
+        driver: bridge
+volumes:
+    mysql-data:
+    website-data:
