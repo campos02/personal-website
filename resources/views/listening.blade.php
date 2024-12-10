@@ -10,8 +10,6 @@
     <div class="artists centered-text">
         <h3>Currently listening to*:</h3>
         <x-artist-list :artists="$listeningArtists"/>
-        <h4>And more...</h4>
-
         <h3>Some other artists I like*:</h3>
         <x-artist-list :artists="$otherArtists"/>
         <h4>*Not always up to date</h4>

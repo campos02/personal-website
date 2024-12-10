@@ -1,10 +1,13 @@
 /* Variables */
 :root {
     --bg-color: #fdfdfd;
+    --bg-grandient-color: #e1e1e1;
     --bg-color-dark: #000000ea;
+    --bg-grandient-color-dark: #242424;
     --text-color: black;
     --text-color-dark: #fffffff5;
-    --drop-shadow-color: #a5a5a5;
+    --text-drop-shadow-color: #f4f4f4;
+    --drop-shadow-color: #777777;
     --drop-shadow-color-dark: black;
     --link-color: #267dff;
     --link-color-dark: #458ffd;
@@ -34,13 +37,19 @@
     color: var(--actions-hover-color);
 }
 
+.button {
+    filter: drop-shadow(0 0.1rem 0.1rem var(--drop-shadow-color));
+}
+
 /* Website */
 body {
     margin: 0;
     padding: 0;
     scrollbar-width: thin;
     font-family: DM Sans;
-    background-color: var(--bg-color);
+    background: linear-gradient(var(--bg-color), var(--bg-grandient-color));
+    background-attachment: fixed;
+    filter: drop-shadow(0 0.1rem 0.1rem var(--text-drop-shadow-color));
     color: var(--text-color);
     font-size: 1.05rem;
     font-weight: 500;
@@ -53,6 +62,11 @@ a {
 
 a:hover {
     color: var(--link-hover-color);
+}
+
+img {
+    filter: drop-shadow(0 0.1rem 0.1rem var(--drop-shadow-color));
+    border-radius: 0.4rem;
 }
 
 .wrapper {
@@ -138,8 +152,22 @@ img {
 }
 
 @media (prefers-color-scheme: dark) {
+    .actions a {
+        color: var(--actions-text-color-dark);
+    }
+
+    .actions a:hover {
+        color: var(--actions-hover-color-dark);
+    }
+
+    .button {
+        filter: drop-shadow(0 0.1rem 0.1rem var(--drop-shadow-color-dark));
+    }
+
     body {
-        background-color: var(--bg-color-dark);
+        background: linear-gradient(var(--bg-color-dark), var(--bg-grandient-color-dark));
+        background-attachment: fixed;
+        filter: drop-shadow(0 0.1rem 0.1rem var(--drop-shadow-color-dark));
         color: var(--text-color-dark);
         font-weight: normal;
     }
@@ -152,11 +180,7 @@ img {
         color: var(--link-hover-color-dark);
     }
 
-    .actions a {
-        color: var(--actions-text-color-dark);
-    }
-
-    .actions a:hover {
-        color: var(--actions-hover-color-dark);
+    img {
+        filter: drop-shadow(0 0.1rem 0.1rem var(--drop-shadow-color-dark));
     }
 }

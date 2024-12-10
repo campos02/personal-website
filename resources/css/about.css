@@ -13,16 +13,21 @@
     gap: 0.25rem;
     border-radius: 0.3rem;
     font-weight: normal;
-    filter: drop-shadow(0 0 0.05rem var(--drop-shadow-color));
     color: var(--text-color-dark);
+    text-shadow: 0 0.1rem 0.1rem var(--drop-shadow-color-dark);
 }
 
 .socials svg {
     height: 1.5rem;
+    filter: drop-shadow(0 0.1rem 0.1rem var(--drop-shadow-color-dark));
 }
 
 .bluesky, .bluesky:hover {
     background-color: #2194ff;
+}
+
+.bluesky svg {
+    filter: drop-shadow(0 0.1rem 0.1rem #393939);
 }
 
 .github, .github:hover, .email, .email:hover {
@@ -30,10 +35,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .socials a {
-        filter: drop-shadow(0 0 0.2rem var(--drop-shadow-color-dark));
-    }
-
     .bluesky, .bluesky:hover {
         background-color: #118cffdb;
     }

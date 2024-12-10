@@ -12,7 +12,7 @@
             <x-slot:title>AvaMSN</x-slot:title>
 
             <x-slot:img>
-                <img src="images/avamsn.png" alt="AvaMSN login screen" class="project-img"/>
+                <img src="images/avamsn.png" alt="AvaMSN login screen"/>
             </x-slot:img>
 
             <p>
@@ -35,7 +35,7 @@
             <x-slot:title>Website Volume</x-slot:title>
 
             <x-slot:img>
-                <img src="images/websitevolume.png" alt="Website Volume popup" class="project-img"/>
+                <img src="images/websitevolume.png" alt="Website Volume popup"/>
             </x-slot:img>
 
             <p>
@@ -57,7 +57,7 @@
             <x-slot:title>VerificarMudancasNoQ</x-slot:title>
 
             <x-slot:img>
-                <img src="images/verificarqconfig.png" alt="VerificarMudancasNoQ config screen" class="project-img"/>
+                <img src="images/verificarqconfig.png" alt="VerificarMudancasNoQ config screen"/>
             </x-slot:img>
 
             <p>
@@ -81,7 +81,7 @@
             <x-slot:title>Artists API client</x-slot:title>
 
             <x-slot:img>
-                <img src="images/artistsapiclient.png" alt="Artists API client main screen" class="project-img"/>
+                <img src="images/artistsapiclient.png" alt="Artists API client main screen"/>
             </x-slot:img>
 
             <p>
