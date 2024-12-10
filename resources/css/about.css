@@ -22,20 +22,32 @@
     filter: drop-shadow(0 0.1rem 0.1rem var(--drop-shadow-color-dark));
 }
 
-.bluesky, .bluesky:hover {
+.bluesky {
     background-color: #2194ff;
+}
+
+.bluesky:hover {
+    background-color: #319cff;
 }
 
 .bluesky svg {
     filter: drop-shadow(0 0.1rem 0.1rem #393939);
 }
 
-.github, .github:hover, .email, .email:hover {
+.github, .email {
     background-color: #2f2f2f;
 }
 
+.github:hover, .email:hover {
+    background-color: #3e3e3e;
+}
+
 @media (prefers-color-scheme: dark) {
-    .bluesky, .bluesky:hover {
+    .bluesky {
         background-color: #118cffdb;
+    }
+
+    .bluesky:hover {
+        background-color: #118cfff1;
     }
 }
