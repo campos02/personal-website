@@ -1,7 +1,7 @@
 .socials {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(2, auto);
     gap: 0.5rem;
     margin-top: -0.8rem;
 }
@@ -22,32 +22,10 @@
     filter: drop-shadow(0 0.1rem 0.1rem var(--drop-shadow-color-dark));
 }
 
-.bluesky {
-    background-color: #2194ff;
-}
-
-.bluesky:hover {
-    background-color: #319cff;
-}
-
-.bluesky svg {
-    filter: drop-shadow(0 0.1rem 0.1rem #393939);
-}
-
 .github, .email {
     background-color: #2f2f2f;
 }
 
 .github:hover, .email:hover {
     background-color: #3e3e3e;
-}
-
-@media (prefers-color-scheme: dark) {
-    .bluesky {
-        background-color: #118cffdb;
-    }
-
-    .bluesky:hover {
-        background-color: #118cfff1;
-    }
 }
