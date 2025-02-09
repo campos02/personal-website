@@ -54,26 +54,15 @@
         </x-project>
 
         <x-project>
-            <x-slot:title>VerificarMudancasNoQ</x-slot:title>
+            <x-slot:title>Wafrn</x-slot:title>
 
             <x-slot:img>
-                <img src="images/verificarqconfig.png" alt="VerificarMudancasNoQ config screen"/>
+                <img src="images/wafrn.png" alt="Explore Wafrn page"/>
             </x-slot:img>
 
             <p>
-                Basically a webscraper and page monitor. A sound is played every time changes are 
-                detected in a page. It sits in the system tray and can be configured by 
-                editing its .config file or by using its configuration screen, which can be seen 
-                in the image above.
-            </p>
-            <p>
-                It was very useful to know when the teachers posted any grade in my school's 
-                website, which is where it was designed to scrape pages from. The site isn't used 
-                anymore by the school though, it was replaced by a more advanced one, so this project 
-                doesn't have much use nowadays.
-            </p>
-            <p>
-                This version was made in C# using WPF for its graphical interface.
+                Not my project, but I've been contributing to it. <a href="https://app.wafrn.net" target="_blank">Wafrn</a>
+                is a Fediverse Tumblr clone with Bluesky integration.
             </p>
         </x-project>
 

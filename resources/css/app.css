@@ -120,20 +120,20 @@ ul {
 }
 
 img {
-    max-width: 1000px;
+    max-width: 45em;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1380px) {
     .main-content {
         padding: 1rem 2rem 2rem 2rem;
     }
 
     img {
-        max-width: 19rem;
+        max-width: 30em;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 530px) {
     nav {
         gap: 1rem;
         grid-template-columns: auto;
@@ -148,6 +148,10 @@ img {
         display: grid;
         gap: 1rem;
         margin: 0;
+    }
+
+    img {
+        max-width: 20em;
     }
 }
 
