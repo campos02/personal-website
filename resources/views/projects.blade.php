@@ -7,6 +7,10 @@
         @vite('resources/css/projects.css')
     </x-slot:resources>
 
+    <p class="centered-text">
+        All projects are open source. If you'd like to further motivate me to work on them consider
+        <a href="https://ko-fi.com/campos02" target="_blank">donating!</a>
+    </p>
     <div class="vertical-gaps centered-text projects">
         <x-project>
             <x-slot:title>AvaMSN</x-slot:title>
