@@ -22,7 +22,7 @@
             could get quite technical at times.
         </p>
         <p>
-            I program as a hobby too. My projects page can be found at the navbar on top of every page.
+            I work on open source projects too, they can be found at the navbar on top of every page.
         </p>
     </div>
     <div class="centered-text">

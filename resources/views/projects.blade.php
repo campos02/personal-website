@@ -8,7 +8,7 @@
     </x-slot:resources>
 
     <p class="centered-text">
-        All projects are open source. If you'd like to further motivate me to work on them consider
+        All projects are open source. If you'd like further motivating me to work on them consider
         <a href="https://ko-fi.com/campos02" target="_blank">donating!</a>
     </p>
     <div class="vertical-gaps centered-text projects">
@@ -24,13 +24,13 @@
             </p>
             <p>
                 MSNP was the protocol used by MSN Messenger, with this client using version 15 of the protocol.
-                Though Messenger has been dead for years now, there are third-party servers such as
+                Though Messenger has been dead for years now, there are third party servers such as
                 <a href="https://crosstalk.hiden.cc" target="_blank">CrossTalk</a> that
-                implement those MSNP versions and more, thus reviving official clients and working with old and new third-party
+                implement those MSNP versions and more, thus reviving official clients and working with old and new third party
                 ones.
             </p>
             <p>
-                This project was made with C# and Avalonia, and is available for Windows, Linux and MacOS
+                This project was made with C# and Avalonia, and is available for Windows, Linux and macOS
                 <a href="https://github.com/campos02/AvaMSN" target="_blank">here</a>.
             </p>
         </x-project>
@@ -52,7 +52,7 @@
                 reopening the browser or opening a new tab with the same website.
             </p>
             <p>
-                It is currently Chromium-only (couldn't find a way to properly do what it does on Firefox), open source and<br> available
+                It is currently Chromium-only (couldn't find a way to properly do what it does on Firefox) and<br> available
                 <a href="https://chromewebstore.google.com/detail/website-volume/iapmlepgbakoijdigljffaehkgpffemi" target="_blank">in the Chrome Web Store</a>.
             </p>
         </x-project>
@@ -82,10 +82,7 @@
                 artists and their albums from the database. Way better than adding records or making requests manually, like I used to.
             </p>
             <p>
-                The app requires a login and is available at a subdomain. As the image shows it is themed similarly to the main website.
-            </p>
-            <p>
-                Made using Vue.js.
+                The app requires a login and is available at a subdomain. Made using Vue.js.
             </p>
         </x-project>
     </div>
