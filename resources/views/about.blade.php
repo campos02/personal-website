@@ -28,7 +28,7 @@
     <div class="centered-text">
         <h2>Languages and frameworks</h2>
         <p>
-            These include: C, C#, HTML, CSS, JavaScript, PHP, Python, Avalonia, Laravel and Vue.js.
+            These include: C, C#, Rust, HTML, CSS, JavaScript, PHP, Python, Avalonia, Laravel and Vue.js.
             I'm self-taught at everything except C, which I'm learning in University.
         </p>
     </div>
