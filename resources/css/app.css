@@ -1,22 +1,22 @@
 /* Variables */
 :root {
     --bg-color: #fdfdfd;
-    --bg-grandient-color: #e1e1e1;
-    --bg-color-dark: #000000ea;
-    --bg-grandient-color-dark: #242424;
+    --bg-grandient-color: #cacaca;
+    --bg-color-dark: black;
+    --bg-grandient-color-dark: #2b2b2b;
     --text-color: black;
-    --text-color-dark: #fffffff5;
+    --text-color-dark: #ffffffec;
     --text-drop-shadow-color: #f4f4f4;
     --drop-shadow-color: #777777;
     --drop-shadow-color-dark: black;
-    --link-color: #267dff;
-    --link-color-dark: #458ffd;
-    --link-hover-color: #71a8ff;
-    --link-hover-color-dark: #7baefc;
-    --actions-text-color: #000000c2;
-    --actions-text-color-dark: #ffffffe5;
+    --link-color: #1070ff;
+    --link-color-dark: #60a0ff;
+    --link-hover-color: #5294ff;
+    --link-hover-color-dark: #9ec5ff;
+    --actions-text-color: #000000d5;
+    --actions-text-color-dark: #eeeeeef3;
     --actions-hover-color: black;
-    --actions-hover-color-dark: white;
+    --actions-hover-color-dark: #fffffffb;
 }
 
 /* Utility classes */
@@ -49,7 +49,6 @@ body {
     font-family: DM Sans;
     background: linear-gradient(var(--bg-color), var(--bg-grandient-color));
     background-attachment: fixed;
-    filter: drop-shadow(0 0.1rem 0.1rem var(--text-drop-shadow-color));
     color: var(--text-color);
     font-size: 1.05rem;
     font-weight: 500;
@@ -171,7 +170,6 @@ img {
     body {
         background: linear-gradient(var(--bg-color-dark), var(--bg-grandient-color-dark));
         background-attachment: fixed;
-        filter: drop-shadow(0 0.1rem 0.1rem var(--drop-shadow-color-dark));
         color: var(--text-color-dark);
         font-weight: normal;
     }
