@@ -58,6 +58,22 @@
         </x-project>
 
         <x-project>
+            <x-slot:title>R²M</x-slot:title>
+
+            <x-slot:img>
+                <img src="images/r2m.png" alt="R²M website"/>
+            </x-slot:img>
+
+            <p>
+                A WIP MSNP11-12 server. It intends to eventually leverage the extensible nature of
+                <a href="https://github.com/polyphony-chat">Polyproto</a> in order to be federated.
+                The project is currently in private testing and its website is available
+                <a href="https://r2m.camposs.net/">here</a>.
+            </p>
+        </x-project>
+
+
+        <x-project>
             <x-slot:title>Wafrn</x-slot:title>
 
             <x-slot:img>
