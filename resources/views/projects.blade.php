@@ -13,29 +13,6 @@
     </p>
     <div class="vertical-gaps centered-text projects">
         <x-project>
-            <x-slot:title>AvaMSN</x-slot:title>
-
-            <x-slot:img>
-                <img src="images/avamsn.png" alt="AvaMSN login screen"/>
-            </x-slot:img>
-
-            <p>
-                A cross-platform MSNP client. Still a work in progress, but it has a decent set of features.
-            </p>
-            <p>
-                MSNP was the protocol used by MSN Messenger, with this client using version 15 of the protocol.
-                Though Messenger has been dead for years now, there are third party servers such as
-                <a href="https://crosstalk.hiden.cc" target="_blank">CrossTalk</a> that
-                implement those MSNP versions and more, thus reviving official clients and working with old and new third party
-                ones.
-            </p>
-            <p>
-                This project was made with C# and Avalonia, and is available for Windows, Linux and macOS
-                <a href="https://github.com/campos02/AvaMSN" target="_blank">here</a>.
-            </p>
-        </x-project>
-
-        <x-project>
             <x-slot:title>Website Volume</x-slot:title>
 
             <x-slot:img>
