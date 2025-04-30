@@ -42,9 +42,7 @@
             </x-slot:img>
 
             <p>
-                A WIP MSNP11-12 server. It intends to eventually leverage the extensible nature of
-                <a href="https://github.com/polyphony-chat">Polyproto</a> in order to be federated.
-                The project is currently in private testing and its website is available
+                A WIP MSNP11-12 server written in Rust. The project is currently in private testing and its website is available
                 <a href="https://r2m.camposs.net/">here</a>.
             </p>
         </x-project>
