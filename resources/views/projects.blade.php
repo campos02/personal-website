@@ -69,11 +69,32 @@
             </x-slot:img>
 
             <p>
-                How I manage the favorite artists page. It is a web client to the private API that allows me to add or remove
-                artists and their albums from the database. Way better than adding records or making requests manually, like I used to.
+                A web client to the private API that allows me to add or remove artists and their albums from the database.
             </p>
             <p>
-                The app requires a login and is available at a subdomain. Made using Vue.js.
+                Made using Vue.js.
+            </p>
+        </x-project>
+
+        <x-project>
+            <x-slot:title>AvaMSN</x-slot:title>
+
+            <x-slot:img>
+                <img src="images/avamsn.png" alt="AvaMSN login screen"/>
+            </x-slot:img>
+
+            <p>
+                A now archived cross-platform MSNP client. It had a decent set of features.
+            </p>
+            <p>
+                MSNP was the protocol used by MSN Messenger, with this client using version 15 of the protocol.
+                Though Messenger has been dead for years now, there are third party servers such as the already mentioned R²M or
+                <a href="https://crosstalk.hiden.cc" target="_blank">CrossTalk</a> that
+                implement those MSNP versions and more, thus reviving official clients and working with old and new third party
+                ones.
+            </p>
+            <p>
+                This project was made with C# and Avalonia, and available for Windows, Linux and macOS.
             </p>
         </x-project>
     </div>
