@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArtistsApiController;
 use App\Http\Controllers\AlbumsApiController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,32 +24,36 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/token', [AuthController::class, 'createToken']);
 
-Route::get('/artists', [ArtistsApiController::class, 'getArtists']);
+Route::prefix('/artists')->group(function () {
+    Route::get('/', [ArtistsApiController::class, 'getArtists']);
+    Route::get('/listening', [ArtistsApiController::class, 'getListeningArtists']);
+    Route::get('/other', [ArtistsApiController::class, 'getOtherArtists']);
+    Route::get('/{id}', [ArtistsApiController::class, 'getArtistById']);
+    Route::get('/{artistId}/albums', [AlbumsApiController::class, 'getArtistAlbums']);
+    Route::get('/{artistId}/albums/{albumId}', [AlbumsApiController::class, 'getArtistAlbumById']);
+    Route::post('/id', [ArtistsApiController::class, 'getArtistId']);
 
-Route::get('/artists/listening', [ArtistsApiController::class, 'getListeningArtists']);
+    Route::middleware('auth:sanctum')->group(function () {
+        Route::post('/', [ArtistsApiController::class, 'addArtists']);
+        Route::delete('/', [ArtistsApiController::class, 'removeArtist']);
+        Route::delete('/{id}', [ArtistsApiController::class, 'removeArtistById']);
+        Route::post('/{artistId}/albums', [AlbumsApiController::class, 'addAlbum']);
+        Route::delete('/{artistId}/albums', [AlbumsApiController::class, 'removeAlbum']);
+        Route::delete('/{artistId}/albums/{albumId}', [AlbumsApiController::class, 'removeAlbumById']);
+    });
+});
 
-Route::get('/artists/other', [ArtistsApiController::class, 'getOtherArtists']);
+Route::prefix('/albums')->group(function () {
+    Route::get('/', [AlbumsApiController::class, 'getAlbums']);
+    Route::get('/{id}', [AlbumsApiController::class, 'getAlbumById']);
+});
 
-Route::get('/artists/{id}', [ArtistsApiController::class, 'getArtistById']);
+Route::prefix('/posts')->group(function () {
+    Route::get('/', [PostController::class, 'getPosts']);
+    Route::get('/{id}', [PostController::class, 'getPostById']);
 
-Route::get('/artists/{artistId}/albums', [AlbumsApiController::class, 'getArtistAlbums']);
-
-Route::get('/artists/{artistId}/albums/{albumId}', [AlbumsApiController::class, 'getArtistAlbumById']);
-
-Route::post('/artists/id', [ArtistsApiController::class, 'getArtistId']);
-
-Route::middleware('auth:sanctum')->post('/artists', [ArtistsApiController::class, 'addArtists']);
-
-Route::middleware('auth:sanctum')->delete('/artists', [ArtistsApiController::class, 'removeArtist']);
-
-Route::middleware('auth:sanctum')->delete('/artists/{id}', [ArtistsApiController::class, 'removeArtistById']);
-
-Route::middleware('auth:sanctum')->post('/artists/{artistId}/albums', [AlbumsApiController::class, 'addAlbum']);
-
-Route::middleware('auth:sanctum')->delete('/artists/{artistId}/albums', [AlbumsApiController::class, 'removeAlbum']);
-
-Route::middleware('auth:sanctum')->delete('/artists/{artistId}/albums/{albumId}', [AlbumsApiController::class, 'removeAlbumById']);
-
-Route::get('/albums', [AlbumsApiController::class, 'getAlbums']);
-
-Route::get('/albums/{id}', [AlbumsApiController::class, 'getAlbumById']);
+    Route::middleware('auth:sanctum')->group(function () {
+        Route::put('/', [PostController::class, 'createPost']);
+        Route::delete('/{id}', [PostController::class, 'deletePostById']);
+    });
+});
