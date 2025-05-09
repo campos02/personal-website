@@ -13,6 +13,11 @@ class Artist extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'category',
+    ];
+
     /**
      * Returns all artists in the Listening category
      *

@@ -22,7 +22,7 @@ class PostController extends Controller
         $validated = $request->validate([
             'url' => 'required|max:20',
             'title' => 'required|max:100',
-            'body' => 'required',
+            'content' => 'required',
         ]);
 
         return Post::updateOrCreatePost($validated);
