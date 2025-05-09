@@ -11,6 +11,8 @@ export default defineConfig({
                 'resources/css/projects.css',
                 'resources/css/artists.css',
                 'resources/css/fonts.css',
+                'resources/css/blog.css',
+                'resources/css/blogpost.css',
                 'resources/js/footer.js',
                 'resources/js/albums.js'
             ],

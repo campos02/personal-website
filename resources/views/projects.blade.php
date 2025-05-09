@@ -56,8 +56,8 @@
             </x-slot:img>
 
             <p>
-                Not my project, but I've been contributing to it. <a href="https://app.wafrn.net" target="_blank">Wafrn</a>
-                is a Fediverse Tumblr clone with Bluesky integration.
+                Not my project, but I have contributed to it. <a href="https://app.wafrn.net" target="_blank">Wafrn</a>
+                is a Fediverse Tumblr-like website with native Bluesky integration, no bridges required or anything.
             </p>
         </x-project>
 
