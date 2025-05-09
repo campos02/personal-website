@@ -1,0 +1,18 @@
+.posts {
+    align-self: self-start;
+}
+
+li {
+    display: grid;
+    padding: 0.7em;
+    gap: 0.25em;
+}
+
+li a {
+    justify-self: start;
+}
+
+.written {
+    font-size: 0.85em;
+    color: var(--grey-text);
+}

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArtistsController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,8 @@ Route::view('/projects', 'projects');
 Route::get('/listening', [ArtistsController::class, 'show']);
 
 Route::get('/about', [AboutController::class, 'show']);
+
+Route::prefix('/blog')->group(function () {
+    Route::get('/', [BlogController::class, 'showPostList']);
+    Route::get('/{post}', [BlogController::class, 'showPost']);
+});

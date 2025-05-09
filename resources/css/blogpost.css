@@ -1,0 +1,18 @@
+.post {
+    align-self: self-start;
+}
+
+h1 {
+    font-size: 1.7em;
+    margin-bottom: 0.2em;
+}
+
+ul {
+    list-style: initial;
+    padding: 1em;
+}
+
+.written {
+    font-size: 0.9em;
+    color: var(--grey-text);
+}

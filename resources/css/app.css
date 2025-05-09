@@ -17,6 +17,7 @@
     --actions-text-color-dark: #eeeeeef3;
     --actions-hover-color: black;
     --actions-hover-color-dark: #fffffffb;
+    --grey-text: #929292;
 }
 
 /* Utility classes */
@@ -88,7 +89,6 @@ nav {
 }
 
 .main-content {
-    justify-self: center;
     padding: 1rem 20rem 2rem 20rem;
     display: grid;
 }
