@@ -8,15 +8,16 @@ RUN apt update && apt install -y \
     zlib1g-dev \
     libzip-dev \
     libwebp-dev \
+    libicu-dev \
     unzip \
+    vim \
     npm --no-install-recommends \
     && docker-php-ext-configure gd --with-freetype --with-webp --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd \
     && docker-php-ext-install zip
 
 RUN apt clean && rm -rf /var/lib/apt/lists/*
-RUN docker-php-ext-install pdo_mysql zip exif pcntl
-RUN docker-php-ext-install gd
+RUN docker-php-ext-install pdo_mysql zip exif pcntl intl gd
 
 COPY --from=composer /usr/bin/composer /usr/local/bin/composer
 
