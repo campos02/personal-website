@@ -24,13 +24,15 @@ class ArtistResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
-                    ->default(null),
+                    ->default(null)
+                    ->required(),
                 Forms\Components\Select::make('category')
-                ->options([
-                    'listening' => 'Listening',
-                    'other' => 'Other',
-                ])
-                ->native(false),
+                    ->options([
+                        'listening' => 'Listening',
+                        'other' => 'Other',
+                    ])
+                    ->native(false)
+                    ->required(),
             ]);
     }
 
