@@ -28,8 +28,7 @@ class PostResource extends Resource
                     ->maxLength(100),
                 Forms\Components\TextInput::make('url')
                     ->required()
-                    ->maxLength(20)
-                    ->unique(),
+                    ->maxLength(20),
                 Forms\Components\MarkdownEditor::make('content')
                     ->required()
                     ->columnSpan(2),
