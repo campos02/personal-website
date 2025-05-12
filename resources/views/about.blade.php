@@ -22,13 +22,16 @@
             could get quite technical at times.
         </p>
         <p>
+            Right now besides studying I'm volunteering at a local news website as a Backend developer working with Laravel.
+        </p>
+        <p>
             I work on open source projects too, they can be found at the navbar on top of every page.
         </p>
     </div>
     <div class="centered-text">
-        <h2>Languages and frameworks</h2>
+        <h2>Languages and technologies</h2>
         <p>
-            These include C, C#, Rust, Java, HTML, CSS, JavaScript, TypeScript, PHP, Python, Node.js, Avalonia, Laravel and Vue.js.
+            These include: C, C#, Rust, Java, HTML, CSS, JavaScript, TypeScript, SQL, PHP, Python, Node.js, Docker and Laravel.
         </p>
         <p>
             I'm self-taught at everything except C and Java, both of which I'm learning in University.
