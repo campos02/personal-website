@@ -47,6 +47,18 @@
             </p>
         </x-project>
 
+        <x-project>
+            <x-slot:title>msnp11-sdk</x-slot:title>
+
+            <x-slot:img>
+                <img src="images/msnp11-sdk.png" alt="msnp11-sdk on crates.io"/>
+            </x-slot:img>
+
+            <p>
+                A Rust MSNP11 client SDK. It also uses UniFFI, which allows generating bindings for Kotlin or Swift.
+                The project is available at <a href="https://crates.io/crates/msnp11-sdk">crates.io</a> too.
+            </p>
+        </x-project>
 
         <x-project>
             <x-slot:title>Wafrn</x-slot:title>
@@ -85,13 +97,6 @@
 
             <p>
                 A now archived cross-platform MSNP client. It had a decent set of features.
-            </p>
-            <p>
-                MSNP was the protocol used by MSN Messenger, with this client using version 15 of the protocol.
-                Though Messenger has been dead for years now, there are third party servers such as the already mentioned R²M or
-                <a href="https://crosstalk.hiden.cc" target="_blank">CrossTalk</a> that
-                implement those MSNP versions and more, thus reviving official clients and working with old and new third party
-                ones.
             </p>
             <p>
                 This project was made with C# and Avalonia, and available for Windows, Linux and macOS.

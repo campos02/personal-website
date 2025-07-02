@@ -31,7 +31,7 @@
     <div class="centered-text">
         <h2>Languages and technologies</h2>
         <p>
-            These include: C, C#, Rust, Java, HTML, CSS, JavaScript, TypeScript, SQL, PHP, Python, Node.js, Docker and Laravel.
+            These include: C, C++, Rust, C#, Java, Kotlin, HTML, CSS, JavaScript, TypeScript, SQL, PHP, Python, Node.js, Docker and Laravel.
         </p>
         <p>
             I'm self-taught at everything except C and Java, both of which I'm learning in University.
