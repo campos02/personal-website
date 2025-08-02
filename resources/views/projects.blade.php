@@ -61,6 +61,19 @@
         </x-project>
 
         <x-project>
+            <x-slot:title>icedm</x-slot:title>
+
+            <x-slot:img>
+                <img src="images/icedm.png" alt="icedm contact list screen"/>
+            </x-slot:img>
+
+            <p>
+                A cross-platform MSNP11 client written in Rust using the iced framework. It uses the SDK above for the protocol
+                innerworkings and is available for Linux, macOS and Windows.
+            </p>
+        </x-project>
+
+        <x-project>
             <x-slot:title>Wafrn</x-slot:title>
 
             <x-slot:img>
@@ -85,21 +98,6 @@
             </p>
             <p>
                 Made using Vue.js.
-            </p>
-        </x-project>
-
-        <x-project>
-            <x-slot:title>AvaMSN</x-slot:title>
-
-            <x-slot:img>
-                <img src="images/avamsn.png" alt="AvaMSN login screen"/>
-            </x-slot:img>
-
-            <p>
-                A now archived cross-platform MSNP client. It had a decent set of features.
-            </p>
-            <p>
-                This project was made with C# and Avalonia, and available for Windows, Linux and macOS.
             </p>
         </x-project>
     </div>
