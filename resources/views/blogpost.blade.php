@@ -3,6 +3,10 @@
         {{ $post['title'] }}
     </x-slot:title>
 
+    <x-slot:description>
+        {{ substr($post['content'], 0, 100).'...' }}
+    </x-slot:description>
+
     <x-slot:resources>
         @vite('resources/css/blogpost.css')
     </x-slot:resources>

@@ -3,6 +3,10 @@
         About me
     </x-slot:title>
 
+    <x-slot:description>
+        About me page
+    </x-slot:description>
+
     <x-slot:resources>
         @vite('resources/css/about.css')
     </x-slot:resources>

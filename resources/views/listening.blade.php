@@ -3,6 +3,10 @@
         Currently listening...
     </x-slot:title>
 
+    <x-slot:description>
+        Artists I'm currently listening to
+    </x-slot:description>
+
     <x-slot:resources>
         @vite('resources/css/artists.css')
     </x-slot:resources>

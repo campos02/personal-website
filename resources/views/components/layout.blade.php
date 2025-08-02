@@ -4,11 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ $title ?? 'campos\' website' }}</title>
-        <meta name="description" content="My personal website">
+        <meta name="description" content="{{ $description ?? 'My personal website' }}">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://campos02.me/">
-        <meta property="og:title" content="campos' website">
-        <meta property="og:description" content="My personal website">
+        <meta property="og:url" content="{{ url('/') }}">
+        <meta property="og:title" content="{{ $title ?? 'campos\' website' }}">
+        <meta property="og:description" content="{{ $description ?? 'My personal website' }}">
         @vite('resources/css/app.css')
         @vite('resources/css/fonts.css')
         {{ $resources ?? ''}}

@@ -3,6 +3,10 @@
         Blog
     </x-slot:title>
 
+    <x-slot:description>
+        Blogposts I'll write once in a blue moon
+    </x-slot:description>
+
     <x-slot:resources>
         @vite('resources/css/blog.css')
     </x-slot:resources>

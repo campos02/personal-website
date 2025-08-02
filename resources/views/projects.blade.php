@@ -3,6 +3,10 @@
         Projects
     </x-slot:title>
 
+    <x-slot:description>
+        Projects I've worked on
+    </x-slot:description>
+
     <x-slot:resources>
         @vite('resources/css/projects.css')
     </x-slot:resources>
