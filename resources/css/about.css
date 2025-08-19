@@ -1,7 +1,7 @@
 .socials {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
     gap: 0.5rem;
     margin-top: -0.8rem;
 }
@@ -22,10 +22,14 @@
     filter: drop-shadow(0 0.1rem 0.1rem var(--drop-shadow-color-dark));
 }
 
-.github, .email {
+.black-logo, .email {
     background-color: #2f2f2f;
 }
 
-.github:hover, .email:hover {
+.black-logo:hover, .email:hover {
     background-color: #3e3e3e;
+}
+
+.black-logo img {
+    height: 1.35em;
 }
