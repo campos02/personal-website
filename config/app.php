@@ -69,7 +69,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => env('APP_TIMEZONE', 'UTC'),
 
     /*
     |--------------------------------------------------------------------------
@@ -214,4 +214,6 @@ return [
     ])->toArray(),
 
     'admin_domain' => env('ADMIN_DOMAIN'),
+
+    'birthday' => env('BIRTHDAY', '2002-12-24'),
 ];
