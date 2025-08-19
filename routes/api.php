@@ -1,11 +1,11 @@
 <?php
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ArtistsApiController;
 use App\Http\Controllers\AlbumsApiController;
+use App\Http\Controllers\ArtistsApiController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +31,7 @@ Route::prefix('/artists')->group(function () {
     Route::get('/{id}', [ArtistsApiController::class, 'getArtistById']);
     Route::get('/{artistId}/albums', [AlbumsApiController::class, 'getArtistAlbums']);
     Route::get('/{artistId}/albums/{albumId}', [AlbumsApiController::class, 'getArtistAlbumById']);
-    Route::post('/id', [ArtistsApiController::class, 'getArtistId']);
+    Route::get('/id', [ArtistsApiController::class, 'getArtistId']);
 
     Route::middleware('auth:sanctum')->group(function () {
         Route::post('/', [ArtistsApiController::class, 'addArtists']);

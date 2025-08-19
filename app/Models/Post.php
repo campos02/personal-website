@@ -9,16 +9,16 @@ class Post extends Model
     protected $fillable = [
         'url',
         'title',
-        'content'
+        'content',
     ];
-    
+
     public static function updateOrCreatePost($data): Post
     {
         return Post::updateOrCreate(
             ['url' => $data['url']],
             [
                 'title' => $data['title'],
-                'content' => $data['content']
+                'content' => $data['content'],
             ]
         );
     }

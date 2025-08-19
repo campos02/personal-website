@@ -10,8 +10,6 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ArtistResource extends Resource
 {
@@ -48,11 +46,11 @@ class ArtistResource extends Resource
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('category')
-                ->options([
-                    'listening' => 'Listening',
-                    'other' => 'Other',
-                ])
-                ->native(false),
+                    ->options([
+                        'listening' => 'Listening',
+                        'other' => 'Other',
+                    ])
+                    ->native(false),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

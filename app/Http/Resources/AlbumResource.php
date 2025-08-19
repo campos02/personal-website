@@ -18,7 +18,7 @@ class AlbumResource extends JsonResource
             'id' => $this->id,
             'artistId' => $this->artist_id,
             'artistName' => $this->artist_name,
-            'album' => $this->album
+            'album' => $this->album,
         ];
     }
 }

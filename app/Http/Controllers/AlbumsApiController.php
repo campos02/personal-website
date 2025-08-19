@@ -2,33 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Artist;
-use App\Models\Album;
 use App\Http\Resources\AlbumResource;
+use App\Models\Album;
+use App\Models\Artist;
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class AlbumsApiController extends Controller
 {
-
     /**
      * Gets all albums
-     *
-     * @return AnonymousResourceCollection
      */
-    public function getAlbums() : AnonymousResourceCollection
+    public function getAlbums(): AnonymousResourceCollection
     {
         return AlbumResource::collection(Album::all());
     }
 
     /**
      * Gets an artist using its ID
-     *
-     * @param string $id
-     * @return AlbumResource
      */
-    public function getAlbumById(string $id) : AlbumResource
+    public function getAlbumById(string $id): AlbumResource
     {
         $album = Album::selectAlbum($id);
 
@@ -37,11 +30,8 @@ class AlbumsApiController extends Controller
 
     /**
      * Gets all albums by an artist
-     *
-     * @param string $artistId
-     * @return AnonymousResourceCollection
      */
-    public function getArtistAlbums(string $artistId) : AnonymousResourceCollection
+    public function getArtistAlbums(string $artistId): AnonymousResourceCollection
     {
         $artist = Artist::selectArtistById($artistId);
 
@@ -50,12 +40,8 @@ class AlbumsApiController extends Controller
 
     /**
      * Gets an album by an artist
-     *
-     * @param string $artistId
-     * @param string $albumId
-     * @return AlbumResource
      */
-    public function getArtistAlbumById(string $artistId, string $albumId) : AlbumResource
+    public function getArtistAlbumById(string $artistId, string $albumId): AlbumResource
     {
         $album = Artist::selectArtistById($artistId)->selectAlbum($albumId);
 
@@ -64,17 +50,13 @@ class AlbumsApiController extends Controller
 
     /**
      * Adds a new album to an artist's records
-     *
-     * @param Request $request
-     * @param string $artistId
-     * @return string
      */
-    public function addAlbum(Request $request, string $artistId) : string
+    public function addAlbum(Request $request, string $artistId): string
     {
         $request->validate([
-            'album' => 'required'
+            'album' => 'required',
         ]);
-        
+
         $album = $request->input('album');
         $artist = Artist::selectArtistById($artistId);
 
@@ -83,12 +65,8 @@ class AlbumsApiController extends Controller
 
     /**
      * Removes an album from an artist's records
-     *
-     * @param Request $request
-     * @param string $artistId
-     * @return string
      */
-    public function removeAlbum(Request $request, string $artistId) : string
+    public function removeAlbum(Request $request, string $artistId): string
     {
         $request->validate([
             'album' => 'required',
@@ -98,23 +76,19 @@ class AlbumsApiController extends Controller
         Artist::selectArtistById($artistId)->deleteAlbum($album);
 
         return response()->json([
-            'result' => "$album removed"
+            'result' => "$album removed",
         ]);
     }
 
     /**
      * Removes an album, using its ID, from an artists records
-     *
-     * @param string $artistId
-     * @param string $albumId
-     * @return string
      */
-    public function removeAlbumById(string $artistId, string $albumId) : string
+    public function removeAlbumById(string $artistId, string $albumId): string
     {
         $album = Artist::selectArtistById($artistId)->deleteAlbumById($albumId);
 
         return response()->json([
-            'result' => "$album removed"
+            'result' => "$album removed",
         ]);
     }
 }

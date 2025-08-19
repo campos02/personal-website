@@ -15,7 +15,7 @@ class ArtistCollection extends ResourceCollection
     public function toArray(Request $request): array
     {
         return [
-            'artists' => $this->collection
+            'artists' => $this->collection,
         ];
     }
 }

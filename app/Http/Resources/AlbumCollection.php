@@ -15,7 +15,7 @@ class AlbumCollection extends ResourceCollection
     public function toArray(Request $request): array
     {
         return [
-            'albums' => $this->collection
+            'albums' => $this->collection,
         ];
     }
 }

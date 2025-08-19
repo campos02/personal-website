@@ -37,7 +37,6 @@ services:
             MARIADB_PASSWORD: ${DB_PASSWORD}
         volumes:
             - mysql-data:/var/lib/mysql
-            - ./mariadb:/etc/mysql/conf.d/
         networks:
             - internal
     certbot:

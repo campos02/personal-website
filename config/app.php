@@ -213,5 +213,5 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
-    'admin_domain' => env('ADMIN_DOMAIN')
+    'admin_domain' => env('ADMIN_DOMAIN'),
 ];
