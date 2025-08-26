@@ -46,7 +46,7 @@
             </x-slot:img>
 
             <p>
-                A WIP MSNP11-12 server written in Rust. The project is currently in private testing and its website is available
+                An MSNP8-12 server written in Rust. Its website is available
                 <a href="https://r2m.camposs.net/">here</a>.
             </p>
         </x-project>
