@@ -52,32 +52,6 @@
         </x-project>
 
         <x-project>
-            <x-slot:title>msnp11-sdk</x-slot:title>
-
-            <x-slot:img>
-                <img src="images/msnp11-sdk.png" alt="msnp11-sdk on crates.io"/>
-            </x-slot:img>
-
-            <p>
-                A Rust MSNP11 client SDK. It also uses UniFFI, which allows generating bindings for Kotlin or Swift.
-                The project is available at <a href="https://crates.io/crates/msnp11-sdk">crates.io</a> too.
-            </p>
-        </x-project>
-
-        <x-project>
-            <x-slot:title>icedm</x-slot:title>
-
-            <x-slot:img>
-                <img src="images/icedm.png" alt="icedm contact list screen"/>
-            </x-slot:img>
-
-            <p>
-                A cross-platform MSNP11 client written in Rust using the iced framework. It uses the SDK above for the protocol
-                innerworkings and is available for Linux, macOS and Windows.
-            </p>
-        </x-project>
-
-        <x-project>
             <x-slot:title>Wafrn</x-slot:title>
 
             <x-slot:img>
