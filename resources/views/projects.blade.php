@@ -39,19 +39,6 @@
         </x-project>
 
         <x-project>
-            <x-slot:title>R²M</x-slot:title>
-
-            <x-slot:img>
-                <img src="images/r2m.png" alt="R²M website"/>
-            </x-slot:img>
-
-            <p>
-                An MSNP8-12 server written in Rust. Its website is available
-                <a href="https://r2m.camposs.net/">here</a>.
-            </p>
-        </x-project>
-
-        <x-project>
             <x-slot:title>Wafrn</x-slot:title>
 
             <x-slot:img>
@@ -61,6 +48,32 @@
             <p>
                 Not my project, but I have contributed to it. <a href="https://app.wafrn.net" target="_blank">Wafrn</a>
                 is a Fediverse Tumblr-like website with native Bluesky integration, no bridges required or anything.
+            </p>
+        </x-project>
+
+        <x-project>
+            <x-slot:title>meowsn</x-slot:title>
+
+            <x-slot:img>
+                <img src="images/meowsn.png" alt="meowsn contact list screen"/>
+            </x-slot:img>
+
+            <p>
+                A cross platform MSNP11 client written in Rust using egui for its GUI. For the MSNP backend it uses
+                the <a href="https://crates.io/crates/msnp11-sdk">msnp11-sdk</a> crate.
+            </p>
+        </x-project>
+
+        <x-project>
+            <x-slot:title>R²M</x-slot:title>
+
+            <x-slot:img>
+                <img src="images/r2m.png" alt="R²M website"/>
+            </x-slot:img>
+
+            <p>
+                An MSNP8-12 server written in Rust. Its website is available
+                <a href="https://r2m.camposs.net/">here</a>.
             </p>
         </x-project>
 
