@@ -1,4 +1,4 @@
-FROM php:fpm AS php-stage
+FROM php:8.4-fpm AS php-stage
 
 WORKDIR /var/www/personal-website
 RUN apt update && apt install -y \
