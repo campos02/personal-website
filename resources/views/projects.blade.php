@@ -4,7 +4,7 @@
     </x-slot:title>
 
     <x-slot:description>
-        Projects I've worked on
+        Projects other than this website that I've worked on
     </x-slot:description>
 
     <x-slot:resources>
@@ -12,7 +12,7 @@
     </x-slot:resources>
 
     <p class="centered-text">
-        All projects are open source. If you'd like further motivating me to work on them consider
+        All projects (including this website) are open source. If you'd like further motivating me to work on them consider
         <a href="https://ko-fi.com/campos02" target="_blank">donating!</a>
     </p>
     <div class="vertical-gaps centered-text projects">
@@ -20,7 +20,7 @@
             <x-slot:title>Website Volume</x-slot:title>
 
             <x-slot:img>
-                <img src="images/websitevolume.png" alt="Website Volume popup"/>
+                <img src="images/website-volume.png" alt="Website Volume popup"/>
             </x-slot:img>
 
             <p>
@@ -46,8 +46,15 @@
             </x-slot:img>
 
             <p>
-                Not my project, but I have contributed to it. <a href="https://app.wafrn.net" target="_blank">Wafrn</a>
-                is a Fediverse Tumblr-like website with native Bluesky integration, no bridges required or anything.
+                Not my project, but I have contributed to it. <a href="https://join.wafrn.net" target="_blank">Wafrn</a>
+                is a Tumblr-like Fediverse software with native Bluesky integration, no bridges required or anything.
+            </p>
+
+            <p>
+                I worked on many things but the most notorious one was probably implementing the
+                <a href="https://wedistribute.org/2025/10/wafrn-chaotic-good/#bites" target="_blank">bite activity</a>.
+                Bite is a silly poke-like feature based on a specification supported by other software like Iceshrimp.NET.
+                Later on a different Wafrn dev expanded it by creating an Atproto version.
             </p>
         </x-project>
 
@@ -72,23 +79,7 @@
             </x-slot:img>
 
             <p>
-                An MSNP8-12 server written in Rust. Its website is available
-                <a href="https://r2m.camposs.net/">here</a>.
-            </p>
-        </x-project>
-
-        <x-project>
-            <x-slot:title>Artists API client</x-slot:title>
-
-            <x-slot:img>
-                <img src="images/artistsapiclient.png" alt="Artists API client main screen"/>
-            </x-slot:img>
-
-            <p>
-                A web client to the private API that allows me to add or remove artists and their albums from the database.
-            </p>
-            <p>
-                Made using Vue.js.
+                An MSNP8-12 server written in Rust.
             </p>
         </x-project>
     </div>
