@@ -18,15 +18,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'home');
-
 Route::post('/login', [AuthController::class, 'authenticate']);
 
 Route::middleware('auth:sanctum')->get('/logout', [AuthController::class, 'logout']);
 
 Route::view('/projects', 'projects');
-
-Route::get('/listening', [ArtistsController::class, 'show']);
-
 Route::get('/about', [AboutController::class, 'show']);
 
 Route::prefix('/blog')->group(function () {
