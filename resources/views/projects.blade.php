@@ -12,9 +12,9 @@
     </x-slot:resources>
 
     <p class="centered-text">
-        All projects (including this website) are open source. If you'd like further motivating me to work on them consider
-        <a href="https://ko-fi.com/campos02" target="_blank">donating!</a>
+        All projects (including this website) are open source.
     </p>
+    
     <div class="vertical-gaps centered-text projects">
         <x-project>
             <x-slot:title>Website Volume</x-slot:title>
