@@ -11,6 +11,7 @@ RUN apt update && apt install -y \
     libicu-dev \
     unzip \
     vim \
+    git \
     npm --no-install-recommends \
     && docker-php-ext-configure gd --with-freetype --with-webp --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd \

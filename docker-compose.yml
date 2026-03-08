@@ -9,25 +9,6 @@ services:
             - internal
         depends_on:
             - mariadb
-    nginx:
-        image: nginx:stable-alpine
-        restart: unless-stopped
-        ports:
-            - ${APP_PORT:-80}:80
-            - ${SECURE_PORT:-443}:443
-            - ${VITE_PORT:-5173}:${VITE_PORT:-5173}
-        environment:
-            SERVER_NAME: ${SERVER_NAME}
-        volumes:
-            - website-data:/var/www/personal-website
-            - ./nginx/templates:/etc/nginx/templates
-            - ./nginx/ssl-conf:/etc/nginx/ssl-conf
-            - ./certbot/www:/var/www/certbot/:ro
-            - ./certbot/conf/:/etc/nginx/ssl/:ro
-        depends_on:
-            - website
-        networks:
-            - internal
     mariadb:
         image: mariadb
         environment:
@@ -39,11 +20,6 @@ services:
             - mysql-data:/var/lib/mysql
         networks:
             - internal
-    certbot:
-        image: certbot/certbot
-        volumes:
-            - ./certbot/www/:/var/www/certbot/
-            - ./certbot/conf/:/etc/letsencrypt/
 networks:
     internal:
         driver: bridge

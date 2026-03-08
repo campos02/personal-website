@@ -1,8 +1,6 @@
-.git
 *Dockerfile*
 *docker-compose*
 node_modules
-vendor/
-nginx
+vendor
 mariadb
 certbot
