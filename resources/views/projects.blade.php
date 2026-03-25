@@ -32,10 +32,6 @@
                 Due to limitations in the APIs it uses though, a user needs to either click the extension icon or press Alt+Shift+S when
                 reopening the browser or opening a new tab with the same website.
             </p>
-            <p>
-                It is currently Chromium-only (couldn't find a way to properly do what it does on Firefox) and<br> available
-                <a href="https://chromewebstore.google.com/detail/website-volume/iapmlepgbakoijdigljffaehkgpffemi" target="_blank">in the Chrome Web Store</a>.
-            </p>
         </x-project>
 
         <x-project>
