@@ -17,24 +17,6 @@
     
     <div class="vertical-gaps centered-text projects">
         <x-project>
-            <x-slot:title>Website Volume</x-slot:title>
-
-            <x-slot:img>
-                <img src="images/website-volume.png" alt="Website Volume popup"/>
-            </x-slot:img>
-
-            <p>
-                This is an extension that allows changing the volume of websites. It remembers the latest set value
-                even after the browser is closed. Volume is stored in a per website basis, so multiple tabs in the same website have the same
-                volume.
-            </p>
-            <p>
-                Due to limitations in the APIs it uses though, a user needs to either click the extension icon or press Alt+Shift+S when
-                reopening the browser or opening a new tab with the same website.
-            </p>
-        </x-project>
-
-        <x-project>
             <x-slot:title>Wafrn</x-slot:title>
 
             <x-slot:img>
@@ -55,6 +37,24 @@
         </x-project>
 
         <x-project>
+            <x-slot:title>Website Volume</x-slot:title>
+
+            <x-slot:img>
+                <img src="images/website-volume.png" alt="Website Volume popup"/>
+            </x-slot:img>
+
+            <p>
+                This is an extension that allows changing the volume of websites. It remembers the latest set value
+                even after the browser is closed. Volume is stored in a per website basis, so multiple tabs in the same website have the same
+                volume.
+            </p>
+            <p>
+                Due to limitations in the APIs it uses though, a user needs to either click the extension icon or press Alt+Shift+S when
+                reopening the browser or opening a new tab with the same website.
+            </p>
+        </x-project>
+
+        <x-project>
             <x-slot:title>meowsn</x-slot:title>
 
             <x-slot:img>
@@ -63,19 +63,17 @@
 
             <p>
                 A cross platform MSNP11 client written in Rust using egui for its GUI. For the MSNP backend it uses
-                the <a href="https://crates.io/crates/msnp11-sdk">msnp11-sdk</a> crate.
+                my MSNP11 SDK, which is detailed below.
             </p>
         </x-project>
 
         <x-project>
-            <x-slot:title>R²M</x-slot:title>
-
-            <x-slot:img>
-                <img src="images/r2m.png" alt="R²M website"/>
-            </x-slot:img>
+            <x-slot:title>msnp11-sdk</x-slot:title>
 
             <p>
-                An MSNP8-12 server written in Rust.
+                An MSNP11 client SDK written in Rust. It is published in <a href="https://crates.io/crates/msnp11-sdk">crates.io</a>
+                and has been successfully utilized by projects like meowsn and
+                <a href="https://github.com/dskooper/webmsnp">WebMSNP</a>. Kotlin and Swift bindings can also be generated.
             </p>
         </x-project>
     </div>
