@@ -70,6 +70,10 @@
         <x-project>
             <x-slot:title>msnp11-sdk</x-slot:title>
 
+            <x-slot:img>
+                <img src="images/msnp11-sdk.png" alt="msnp11-sdk crates.io page"/>
+            </x-slot:img>
+
             <p>
                 An MSNP11 client SDK written in Rust. It is published in <a href="https://crates.io/crates/msnp11-sdk">crates.io</a>
                 and has been successfully utilized by projects like meowsn and
