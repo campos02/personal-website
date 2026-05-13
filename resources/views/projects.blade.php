@@ -77,7 +77,7 @@
             <p>
                 An MSNP11 client SDK written in Rust. It is published in <a href="https://crates.io/crates/msnp11-sdk">crates.io</a>
                 and has been successfully utilized by projects like meowsn and
-                <a href="https://github.com/dskooper/webmsnp">WebMSNP</a>. Kotlin and Swift bindings can also be generated.
+                <a href="https://github.com/dskooper/PolyMSNP">PolyMSNP</a>. Kotlin and Swift bindings can also be generated.
             </p>
         </x-project>
     </div>

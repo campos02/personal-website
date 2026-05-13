@@ -22,7 +22,6 @@
                     <a href="/projects">Projects</a>
                     <a href="https://campos02.bandcamp.com/">Music</a>
                     <a href="/blog">Blog</a>
-                    <a href="https://ko-fi.com/campos02">Donate</a>
                 </div>
             </nav>
             <main class="main-content">
