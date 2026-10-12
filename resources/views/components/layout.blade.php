@@ -20,6 +20,7 @@
                 <div class="pages">
                     <a href="/about">About me</a>
                     <a href="/projects">Projects</a>
+                    <a href="https://campos02.bandcamp.com/">Music</a>
                     <a href="/blog">Blog</a>
                 </div>
             </nav>
